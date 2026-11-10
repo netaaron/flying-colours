@@ -687,8 +687,8 @@ button{font:inherit;color:inherit}
   </div>
 
   <figure class="bleed">
-    <img src="images/regimental-camp-18c.webp" alt="18 世紀英軍營地，掌旗官高舉黃色團旗行經隊伍" width="1320" height="736" loading="lazy">
-    <figcaption><span><strong>情境重現：18 世紀英軍營地</strong><b>圖 5</b>注意團旗和制服是同一個黃色：這就是團旗叫 <i lang="en">colours</i> 的原因。</span></figcaption>
+    <img src="images/regimental-camp-18c.webp" alt="18 世紀英軍營地的 Trooping the Colour：掌旗官高舉黃色團旗行經隊伍" width="1320" height="736" loading="lazy">
+    <figcaption><span><strong>情境重現：18 世紀英軍營地的 <i lang="en">Trooping the Colour</i></strong><b>圖 5</b>掌旗官扛著團旗在隊伍前走一圈，讓士兵記熟自己的旗。注意團旗和制服是同一個黃色：這就是團旗叫 <i lang="en">colours</i> 的原因。</span></figcaption>
   </figure>
 
   <div class="wrap">
@@ -782,7 +782,7 @@ button{font:inherit;color:inherit}
       <div class="game__head">
         <div>
           <p class="game__tag">遊戲一　說法鑑定所</p>
-          <h3 class="game__title"><span class="nw">有文獻撐腰，</span><span class="nw">還是好聽但靠不住？</span></h3>
+          <h3 class="game__title"><span class="nw">有憑有據，</span><span class="nw">還是以訛傳訛？</span></h3>
         </div>
         <p class="game__hint">五則常聽到的說法，都在報告裡出現過。你來蓋章鑑定。</p>
       </div>
@@ -790,8 +790,8 @@ button{font:inherit;color:inherit}
         <p class="verdict__count" id="vCount"></p>
         <p class="verdict__claim" id="vClaim"></p>
         <div class="verdict__btns" id="vBtns">
-          <button class="btn" type="button" data-v="record">有文獻撐腰</button>
-          <button class="btn" type="button" data-v="folk">好聽，但靠不住</button>
+          <button class="btn" type="button" data-v="record">有憑有據</button>
+          <button class="btn" type="button" data-v="folk">以訛傳訛</button>
         </div>
         <div class="verdict__result" id="vResult" hidden aria-live="polite">
           <div class="stamp" id="vStamp"></div>
@@ -1068,7 +1068,7 @@ vBtns.addEventListener('click', e => {
   const q = CLAIMS[vi], ok = b.dataset.v === q.a; if (ok) vscore++;
   $$('button', vBtns).forEach(x => x.disabled = true); b.classList.add('btn--solid');
   vStamp.className = 'stamp ' + (q.a === 'record' ? 'stamp--record' : 'stamp--folk');
-  vStamp.textContent = q.a === 'record' ? '有文獻撐腰' : '民間詞源';
+  vStamp.textContent = q.a === 'record' ? '有憑有據' : '以訛傳訛';
   vExpl.innerHTML = `<span class="${ok ? 'ok' : 'no'}">${ok ? '鑑定正確。' : '鑑定失誤。'}</span>${q.e}`;
   vNext.textContent = vi === CLAIMS.length - 1 ? '看鑑定成績' : '下一則';
   vResult.hidden = false; ok ? sfx.good() : sfx.bad(); vNext.focus({ preventScroll: true });
