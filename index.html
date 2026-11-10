@@ -118,21 +118,15 @@ button{font:inherit;color:inherit}
 }
 
 /* ============ Chapter head ============ */
-.ch-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:end;margin-bottom:clamp(48px,7vw,96px)}
-.ch-flag{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-.ch-flag svg{width:clamp(76px,8vw,116px);height:auto;filter:drop-shadow(0 10px 18px rgba(16,26,46,.18))}
-.ch-flag__cap{font-family:var(--ui);font-size:.78rem;color:var(--muted);line-height:1.3}
-.ch-flag__cap b{font-family:var(--display);font-weight:400;font-size:1.5rem;color:var(--ink);margin-right:6px;vertical-align:-2px}
-.section--dark .ch-flag__cap,.section--dark .ch-flag__cap b{color:var(--on-navy-muted)}
-.section--dark .ch-flag__cap b{color:var(--on-navy)}
-.ch-no{font-family:var(--ui);font-size:.9rem;letter-spacing:.24em;color:var(--red);margin:0 0 14px}
+.ch-head{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:end;margin-bottom:clamp(48px,7vw,96px)}
+.section--dark .section--dark .ch-no{font-family:var(--ui);font-size:.9rem;letter-spacing:.24em;color:var(--red);margin:0 0 14px}
 .section--dark .ch-no{color:var(--gold-soft)}
 .ch-title{font-size:var(--fs-h2);line-height:1.28;letter-spacing:.02em;text-wrap:balance}
 .ch-title--en{font-family:var(--display);font-weight:400;letter-spacing:-.005em;line-height:1.05}
 .ch-en{font-family:var(--text);font-style:italic;font-size:1.2rem;color:var(--muted);margin:.7em 0 0}
 .section--dark .ch-en{color:var(--on-navy-muted)}
 .ch-en:not([lang="en"]){font-style:normal;font-family:var(--ui);font-size:1.05rem;letter-spacing:.04em}
-@media (max-width:640px){.ch-head{grid-template-columns:1fr;gap:22px}.ch-flag{flex-direction:row;align-items:center}.ch-flag svg{width:68px}}
+
 
 /* ============ Editorial blocks ============ */
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(16px,2.4vw,32px)}
@@ -363,7 +357,6 @@ button{font:inherit;color:inherit}
 <section class="section" id="ch1" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="C"></span><span class="ch-flag__cap"><b>C</b>Charlie</span></div>
       <div>
         <p class="ch-no">第一章</p>
         <h2 class="ch-title">考高分，為什麼要說<br><span class="en-i" lang="en">with flying colours</span>？</h2>
@@ -407,7 +400,6 @@ button{font:inherit;color:inherit}
 <section class="section" id="ch2" data-stop data-chapter style="padding-bottom:0">
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="O"></span><span class="ch-flag__cap"><b>O</b>Oscar</span></div>
       <div>
         <p class="ch-no">第二章</p>
         <h2 class="ch-title">打了勝仗的船，<br>掛滿旗子開回港口？</h2>
@@ -427,7 +419,6 @@ button{font:inherit;color:inherit}
 <section class="section section--deep" id="ch3" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="L"></span><span class="ch-flag__cap"><b>L</b>Lima</span></div>
       <div>
         <p class="ch-no">第三章</p>
         <h2 class="ch-title">到了 19 世紀，<br><span class="nw">這個片語「升級」</span><span class="nw">成大獲全勝</span></h2>
@@ -516,7 +507,6 @@ button{font:inherit;color:inherit}
 <section class="section" id="ch4" data-stop data-chapter style="padding-bottom:0">
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="O"></span><span class="ch-flag__cap"><b>O</b>Oscar</span></div>
       <div>
         <p class="ch-no">第四章　亮出旗幟｜身分與立場</p>
         <h2 class="ch-title"><span class="nw">掛假旗是欺騙，</span><br><span class="nw">亮出真旗</span><span class="nw">是現出原形</span></h2>
@@ -569,7 +559,6 @@ button{font:inherit;color:inherit}
 <section class="section section--dark" id="ch5" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="U"></span><span class="ch-flag__cap"><b>U</b>Uniform</span></div>
       <div>
         <p class="ch-no">第五章　亮出旗幟｜身分與立場</p>
         <h2 class="ch-title ch-title--en" lang="en">nail one’s colours to the mast</h2>
@@ -605,7 +594,6 @@ button{font:inherit;color:inherit}
 <section class="section" id="ch6" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="R"></span><span class="ch-flag__cap"><b>R</b>Romeo</span></div>
       <div>
         <p class="ch-no">第六章　降下旗幟｜認輸</p>
         <h2 class="ch-title"><span class="nw">旗子一降下來，</span><span class="nw">就是認輸了</span></h2>
@@ -656,7 +644,6 @@ button{font:inherit;color:inherit}
 <section class="section" id="ch7" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
-      <div class="ch-flag" aria-hidden="true"><span data-flag="S"></span><span class="ch-flag__cap"><b>S</b>Sierra</span></div>
       <div>
         <p class="ch-no">第七章　軍隊與典禮</p>
         <h2 class="ch-title"><span class="nw">團旗：</span><span class="nw">平常要認得它，</span><br><span class="nw">打仗時往它集合</span></h2>
