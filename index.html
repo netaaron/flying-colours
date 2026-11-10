@@ -183,6 +183,9 @@ button{font:inherit;color:inherit}
 .plate{margin:0}
 .plate img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px}
 .plate--tall img{aspect-ratio:4/5}
+.plate--wide{margin-top:clamp(56px,8vw,104px)}
+.plate--wide img{aspect-ratio:auto}
+.plate--wide figcaption{max-width:46em}
 .plate figcaption{font-family:var(--ui);font-size:.88rem;line-height:1.7;color:var(--muted);margin-top:12px}
 .plate figcaption b{font-family:var(--display);font-weight:400;font-size:1.1rem;color:var(--ink);margin-right:10px}
 .section--dark .plate figcaption{color:var(--on-navy-muted)}
@@ -684,14 +687,12 @@ button{font:inherit;color:inherit}
         </div>
       </article>
     </div>
-  </div>
 
-  <figure class="bleed">
-    <img src="images/regimental-camp-18c.webp" alt="18 世紀英軍營地的 Trooping the Colour：掌旗官高舉黃色團旗行經隊伍" width="1320" height="736" loading="lazy">
-    <figcaption><span><strong>情境重現：18 世紀英軍營地的 <i lang="en">Trooping the Colour</i></strong><b>圖 5</b>掌旗官扛著團旗在隊伍前走一圈，讓士兵記熟自己的旗。注意團旗和制服是同一個黃色：這就是團旗叫 <i lang="en">colours</i> 的原因。</span></figcaption>
-  </figure>
+    <figure class="plate plate--wide">
+      <img src="images/regimental-camp-18c.webp" alt="18 世紀英軍營地的 Trooping the Colour：掌旗官高舉黃色團旗行經隊伍" width="1320" height="736" loading="lazy">
+      <figcaption><b>圖 5</b>情境重現：18 世紀英軍營地的 <i lang="en">Trooping the Colour</i>。掌旗官扛著團旗在隊伍前走一圈，讓士兵記熟自己的旗。注意團旗和制服是同一個黃色：這就是團旗叫 <i lang="en">colours</i> 的原因。</figcaption>
+    </figure>
 
-  <div class="wrap">
     <div class="duo" id="callup">
       <figure class="plate plate--tall">
         <img src="images/call-to-colours-1916.webp" alt="1916 年英國小鎮，穿便服的男子排隊走進掛著米字旗的營舍" width="1320" height="743" loading="lazy">
