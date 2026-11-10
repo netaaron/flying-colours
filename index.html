@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>With Flying Colours｜一個片語的歷史</title>
-<meta name="description" content="開南大學應用英語學系「語言與文化」課堂報告：with flying colours 的真正由來，與它的旗幟片語家族。附六個互動小遊戲。">
+<meta name="description" content="開南大學應用英語學系「語言與文化」課堂報告：with flying colours 的真正由來，與它的旗幟片語家族。">
 <meta property="og:title" content="With Flying Colours｜一個片語的歷史">
 <meta property="og:description" content="考高分為什麼要說 with flying colours？從戰場到考場，一個片語與它的旗幟家族。">
 <meta property="og:image" content="https://netaaron.github.io/flying-colours/images/og-cover.jpg">
@@ -83,7 +83,7 @@ button{font:inherit;color:inherit}
 .hoist.is-celebrating .hoist__btn:nth-child(even) svg{animation-delay:-.6s}
 @keyframes flutter{0%,100%{transform:rotate(0) skewX(0)}30%{transform:rotate(-5deg) skewX(4deg)}65%{transform:rotate(4deg) skewX(-3deg)}}
 .sound{border:1px solid currentColor;background:none;border-radius:999px;padding:5px 12px;font-family:var(--ui);font-size:.8rem;cursor:pointer;opacity:.8;white-space:nowrap}
-.sound[aria-pressed="false"]{opacity:.45;text-decoration:line-through}
+.sound[aria-pressed="false"]{opacity:.5}
 @media (max-width:640px){.masthead__mark{display:none}.masthead{justify-content:space-between}.hoist{gap:2px;padding:0}.hoist__btn{width:26px}}
 
 /* ============ Cover ============ */
@@ -116,24 +116,6 @@ button{font:inherit;color:inherit}
   .cover__media figcaption{display:none}
   .cover__media::after{background:linear-gradient(0deg,rgba(16,26,46,1),rgba(16,26,46,0) 45%),linear-gradient(180deg,rgba(16,26,46,.55),rgba(16,26,46,0) 30%)}
 }
-
-/* ============ Contents ============ */
-.toc{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,6vw,96px)}
-.toc__head h2{font-size:var(--fs-h2);letter-spacing:.06em}
-.toc__head .en{font-family:var(--text);font-style:italic;font-size:1.3rem;color:var(--muted);margin:.2em 0 1.4em}
-.toc__head p{color:var(--ink-2);max-width:20em}
-.toc__list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
-.toc__list a{display:grid;grid-template-columns:44px 3.2em minmax(0,1fr) auto;gap:18px;align-items:center;padding:18px 6px;border-top:1px solid var(--line);text-decoration:none;transition:background-color .25s}
-.toc__list a:hover{background:rgba(21,32,58,.04)}
-.toc__flag svg{width:44px;height:37px;transition:transform .4s cubic-bezier(.3,.7,.2,1.3)}
-.toc__list a:hover .toc__flag svg{transform:rotate(-4deg) translateY(-3px)}
-.toc__no{font-family:var(--ui);font-size:.85rem;color:var(--muted);letter-spacing:.1em}
-.toc__t{font-weight:700;font-size:1.15rem;line-height:1.5}
-.toc__t small{display:block;font-family:var(--text);font-style:italic;font-weight:400;font-size:.95rem;color:var(--muted)}
-.toc__game{font-family:var(--ui);font-size:.78rem;color:var(--red);border:1px solid currentColor;border-radius:999px;padding:3px 10px;white-space:nowrap}
-.toc__list .is-minor a{grid-template-columns:44px 3.2em minmax(0,1fr) auto}
-.toc__list .is-minor .toc__t{font-weight:600;font-size:1.05rem}
-@media (max-width:860px){.toc{grid-template-columns:1fr}.toc__list a,.toc__list .is-minor a{grid-template-columns:36px 3.6em minmax(0,1fr);gap:12px}.toc__flag svg{width:36px;height:30px}.toc__game{grid-column:3;justify-self:start}}
 
 /* ============ Chapter head ============ */
 .ch-head{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:end;margin-bottom:clamp(48px,7vw,96px)}
@@ -207,20 +189,15 @@ button{font:inherit;color:inherit}
 .section--dark .plate figcaption b{color:var(--on-navy)}
 
 /* ============ Ch1 ============ */
-.flip{display:inline-block;border:0;background:none;padding:0;cursor:pointer;perspective:900px;margin:.2em 0 .1em}
-.flip__in{display:grid;transition:transform .9s cubic-bezier(.5,-.1,.2,1.25);transform-style:preserve-3d}
-.flip__a,.flip__b{grid-area:1/1;font-family:var(--display);font-size:clamp(4rem,2.5rem + 7vw,8.5rem);line-height:1;backface-visibility:hidden;-webkit-backface-visibility:hidden;padding:.05em .1em}
-.flip__b{transform:rotateX(180deg);color:var(--red)}
-.flip[aria-pressed="true"] .flip__in{transform:rotateX(180deg)}
-.flip:hover .flip__a{color:var(--ink-2)}
-.flip-cap{font-family:var(--ui);font-size:.95rem;color:var(--muted);margin:0 0 2.4em;min-height:1.7em}
-.flip-cap b{color:var(--ink)}
 .defs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px);margin-top:12px}
 .def h3{font-size:1.25rem;margin:10px 0 8px}
 .def svg{width:46px;height:46px}
 @media (max-width:640px){.defs{grid-template-columns:1fr}}
 
 /* ============ Games (shared) ============ */
+.games-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px}
+.games-head .sound{color:var(--ink);padding:8px 16px;font-size:.88rem}
+.phrase__icon{width:64px;height:64px;color:var(--ink);display:block;margin-bottom:14px}
 .game{background:var(--navy);color:var(--on-navy);border-radius:6px;padding:clamp(22px,3.6vw,44px);margin-block:clamp(56px,8vw,104px);position:relative;overflow:hidden}
 .section--dark .game{background:var(--navy-2);box-shadow:inset 0 0 0 1px var(--line-dark)}
 .game__head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 32px;padding-bottom:20px;margin-bottom:26px;border-bottom:1px solid var(--line-dark)}
@@ -236,69 +213,23 @@ button{font:inherit;color:inherit}
 .btn[disabled].btn--solid,.btn[disabled].is-right{opacity:1}
 .status{font-family:var(--ui);font-size:.9rem;color:var(--on-navy-muted)}
 
-/* station */
-.station__form{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px}
-.station__input{flex:1 1 220px;min-width:0;font-family:var(--text);font-size:1.3rem;letter-spacing:.12em;text-transform:uppercase;padding:10px 16px;border-radius:4px;border:1px solid rgba(236,232,223,.35);background:var(--navy-2);color:var(--on-navy)}
-.station__input::placeholder{letter-spacing:0;text-transform:none;font-family:var(--ui);font-size:1rem;color:var(--on-navy-muted)}
-.chip{font-family:var(--ui);font-size:.85rem;padding:8px 14px;border-radius:999px;border:1px solid rgba(236,232,223,.3);background:none;color:var(--on-navy);cursor:pointer}
-.chip:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
-.station__line{position:relative;padding-top:18px;min-height:132px}
-.station__line::before{content:"";position:absolute;left:-60px;right:-60px;top:10px;height:2px;background:linear-gradient(90deg,transparent,rgba(236,232,223,.55) 8%,rgba(236,232,223,.55) 92%,transparent)}
-.station__row{display:flex;flex-wrap:wrap;gap:16px 10px}
-.sflag{border:0;background:none;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:hoistIn .7s cubic-bezier(.25,.9,.3,1.2) forwards}
-.sflag svg{width:clamp(48px,7vw,66px);height:auto;transform-origin:50% 0;transition:transform .3s}
-.sflag:hover svg{transform:rotate(-5deg)}
-.sflag span{font-family:var(--display);font-size:1.25rem;line-height:1}
-.sflag[aria-pressed="true"] svg{outline:2px solid var(--gold);outline-offset:4px}
-.sgap{width:28px}
-@keyframes hoistIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-.station__meaning{margin-top:22px;padding:16px 20px;border-radius:4px;background:var(--navy-2);font-family:var(--ui);font-size:.98rem;line-height:1.8;min-height:3.6em}
-.station__meaning b{font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--gold-soft);margin-right:10px}
-.station__src{font-family:var(--ui);font-size:.8rem;color:var(--on-navy-muted);margin:14px 0 0}
-
-/* ============ Ch2 timeline ============ */
-.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px);position:relative}
-.timeline::before{content:"";position:absolute;left:0;right:0;top:4.6rem;height:1px;background:var(--ink);opacity:.35}
-.timeline li{position:relative;padding-top:0}
-.tl__year{font-family:var(--display);font-size:clamp(2.6rem,2rem + 2vw,3.8rem);line-height:1;display:block;height:4.1rem}
-.tl__dot{display:block;width:11px;height:11px;border-radius:50%;background:var(--red);margin:.15rem 0 22px;position:relative;top:.05rem}
-.tl__who{font-family:var(--ui);font-weight:700;font-size:.95rem;margin:0 0 8px}
-.tl__who span{font-weight:400;color:var(--muted);margin-right:6px}
-.timeline p{font-size:1rem;line-height:1.85;margin:0}
-@media (max-width:860px){
-  .timeline{grid-template-columns:1fr;gap:34px;padding-left:28px}
-  .timeline::before{left:5px;right:auto;top:8px;bottom:8px;width:1px;height:auto}
-  .tl__year{height:auto;font-size:2.4rem;margin-bottom:6px}
-  .tl__dot{position:absolute;left:-28px;top:14px;margin:0}
-}
-.rule{margin-top:clamp(56px,7vw,88px);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(24px,3.5vw,40px);background:var(--card);border-radius:4px}
-.rule h3{font-size:1.5rem;line-height:1.5}
-.rule h3 small{display:block;font-family:var(--ui);font-weight:400;font-size:.85rem;color:var(--muted);letter-spacing:.15em;margin-bottom:6px}
-.rule__states{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.rule__state{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;align-items:center}
-.rule__state svg{width:64px;height:64px}
-.rule__state p{margin:0;font-size:1rem;line-height:1.75}
-.rule__state b{display:block;font-size:1.05rem}
-@media (max-width:860px){.rule,.rule__states{grid-template-columns:1fr}}
-
-/* ============ Ch3 shift ============ */
-.shift__stage{display:grid;min-height:290px;align-items:center}
-.shift__era{grid-area:1/1;transition:opacity .25s linear,filter .25s linear,transform .25s linear}
-.shift__when{font-family:var(--ui);font-size:.88rem;letter-spacing:.16em;color:var(--gold-soft);margin:0 0 14px}
-.shift__phrase{font-family:var(--display);font-size:clamp(2.1rem,1.4rem + 3vw,3.9rem);line-height:1.06;margin:0 0 14px}
-.shift__phrase .v{color:var(--gold-soft)}
-.shift__mean{font-weight:700;font-size:1.3rem;margin:0 0 18px}
-.shift__ex{font-family:var(--text);font-style:italic;font-size:1.12rem;line-height:1.6;margin:0 0 4px;max-width:36em}
-.shift__zh{font-family:var(--ui);font-size:.92rem;color:var(--on-navy-muted);margin:0}
-.shift__control{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-top:30px;font-family:var(--ui);font-size:.88rem;color:var(--on-navy-muted)}
-.shift__year{font-family:var(--display);font-size:1.6rem;color:var(--on-navy);text-align:center;margin:26px 0 0;min-height:1.6em}
-input[type=range].range{-webkit-appearance:none;appearance:none;width:100%;height:36px;background:transparent;cursor:grab}
-input[type=range].range:active{cursor:grabbing}
-.range::-webkit-slider-runnable-track{height:2px;background:linear-gradient(90deg,var(--gold-soft) var(--p,0%),rgba(236,232,223,.28) var(--p,0%))}
-.range::-moz-range-track{height:2px;background:rgba(236,232,223,.28)}
-.range::-moz-range-progress{height:2px;background:var(--gold-soft)}
-.range::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;border-radius:50%;background:var(--gold);border:6px solid var(--navy);box-shadow:0 0 0 1px var(--gold);margin-top:-14px}
-.range::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--gold);border:6px solid var(--navy);box-shadow:0 0 0 1px var(--gold)}
+/* ============ Ch1 / Ch3 static ============ */
+.equation{font-family:var(--display);font-size:clamp(3.4rem,2rem + 5.4vw,7rem);line-height:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:.22em;margin:.3em 0 .25em}
+.equation__eq{font-size:.55em;color:var(--muted)}
+.equation__b{color:var(--red)}
+.equation-cap{font-family:var(--ui);font-size:.95rem;color:var(--muted);margin:0 0 2.4em}
+.eras-shift{display:grid;grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);gap:clamp(16px,2.4vw,32px);align-items:stretch}
+.era{padding:clamp(22px,3vw,36px);border-radius:4px;background:var(--card);height:100%}
+.era--now{background:var(--navy);color:var(--on-navy)}
+.era__when{font-family:var(--ui);font-size:.88rem;letter-spacing:.16em;color:var(--muted);margin:0 0 12px}
+.era--now .era__when{color:var(--gold-soft)}
+.era__phrase{font-family:var(--display);font-size:clamp(1.8rem,1.3rem + 1.8vw,2.7rem);line-height:1.1;margin:0 0 12px}
+.era__phrase .v{color:var(--red)}
+.era--now .era__phrase .v{color:var(--gold-soft)}
+.era__mean{font-weight:700;font-size:1.2rem;margin:0 0 16px}
+.era--now .example__zh{color:var(--on-navy-muted)}
+.era__arrow{width:48px;height:48px;color:var(--red);align-self:center}
+@media (max-width:860px){.eras-shift{grid-template-columns:1fr}.era__arrow{transform:rotate(90deg);justify-self:center}}
 .why{margin-top:clamp(40px,5vw,64px)}
 
 /* ============ Family ============ */
@@ -356,27 +287,6 @@ input[type=range].range:active{cursor:grabbing}
 @keyframes flash{0%{opacity:.5}100%{opacity:0}}
 @media (max-width:860px){.nail{grid-template-columns:1fr}}
 
-/* ============ Strike scene ============ */
-.strike__scene{width:100%;height:auto;border-radius:4px;display:block}
-#sflag{transition:transform 1.8s cubic-bezier(.55,.05,.35,1)}
-#sship{transform-box:fill-box;transform-origin:50% 100%;transition:transform 3.4s cubic-bezier(.5,0,.8,.6)}
-.strike__scene[data-state="strike"] #sflag{transform:translateY(122px)}
-.strike__scene[data-state="lower"] #sflag{transform:translateY(58px)}
-.strike__scene[data-state="sink"] #sship{transform:translateY(112px) rotate(-5deg)}
-.strike__scene.reset #sflag,.strike__scene.reset #sship{transition:none}
-.strike{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(20px,3vw,40px);align-items:start}
-.strike__opts{display:grid;gap:10px}
-.sopt{text-align:left;border:1px solid var(--line-dark);background:transparent;border-radius:4px;padding:14px 18px;cursor:pointer;transition:border-color .2s,background-color .2s}
-.sopt:hover{border-color:rgba(236,232,223,.5)}
-.sopt[aria-pressed="true"]{border-color:var(--gold);background:rgba(211,161,42,.08)}
-.sopt b{display:block;font-family:var(--text);font-style:italic;font-weight:400;font-size:1.2rem;line-height:1.35;margin-bottom:2px}
-.sopt span{font-family:var(--ui);font-size:.88rem;color:var(--gold-soft)}
-.strike__out{margin-top:20px;min-height:8.5em}
-.strike__out p{margin:0 0 10px;font-family:var(--ui);font-size:1rem;line-height:1.8}
-.strike__out .en{font-family:var(--text);font-style:italic;font-size:1.1rem}
-.strike__out .zh{color:var(--on-navy-muted);font-size:.92rem}
-@media (max-width:860px){.strike{grid-template-columns:1fr}}
-
 /* ============ Ch7 ============ */
 .duo{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(64px,9vw,128px)}
 .duo--flip{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
@@ -401,32 +311,6 @@ input[type=range].range:active{cursor:grabbing}
 @media (max-width:860px){.eras ol{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter)}.eras li{scroll-snap-align:start}}
 .closing{font-weight:700;font-size:clamp(1.5rem,1.1rem + 1.8vw,2.5rem);line-height:1.55;margin:clamp(64px,8vw,112px) 0 0;max-width:22em;text-wrap:balance}
 
-/* ============ Exam ============ */
-.exam__pips{list-style:none;margin:0 0 26px;padding:0;display:flex;gap:8px;flex-wrap:wrap;position:relative}
-.exam__pips li{width:26px;height:30px;position:relative}
-.exam__pips svg{width:26px;height:22px;transform:translateY(8px);opacity:.4;filter:grayscale(1);transition:transform .6s cubic-bezier(.3,.7,.2,1.3),opacity .4s,filter .4s}
-.exam__pips li.ok svg{transform:none;opacity:1;filter:none}
-.exam__pips li.bad svg{opacity:.5;transform:translateY(8px) rotate(14deg)}
-@media (max-width:480px){.exam__pips{gap:4px}.exam__pips li{width:23px}.exam__pips svg{width:23px;height:19px}}
-.exam__pips li.now::after{content:"";position:absolute;left:8px;right:8px;bottom:-4px;height:2px;background:var(--gold)}
-.exam__num{font-family:var(--ui);font-size:.88rem;color:var(--on-navy-muted);margin:0 0 10px}
-.exam__sentence{font-family:var(--text);font-size:clamp(1.3rem,1.1rem + .9vw,1.85rem);line-height:1.6;margin:0 0 26px;max-width:30em}
-.blank{display:inline-block;min-width:6.5em;border-bottom:2px solid var(--gold-soft);text-align:center;font-style:italic;color:var(--gold-soft);line-height:1.3}
-.blank.bad{color:var(--red-on-navy);border-color:var(--red-on-navy)}
-.exam__opts{display:flex;flex-wrap:wrap;gap:12px}
-.exam__opts .btn{font-family:var(--text);font-style:italic;font-size:1.08rem;font-weight:400}
-.exam__opts .btn.is-right{background:var(--gold);color:var(--navy);border-color:var(--gold)}
-.exam__opts .btn.is-wrong{border-color:var(--red-on-navy);color:var(--red-on-navy);text-decoration:line-through}
-.exam__fb{margin-top:24px;font-family:var(--ui);font-size:.98rem;line-height:1.85}
-.exam__fb[hidden]{display:none}
-.exam__fb p{margin:0 0 10px}
-.exam__fb .verdict-line{font-weight:700}
-.exam__result{text-align:left}
-.exam__result[hidden]{display:none}
-.exam__big{font-family:var(--display);font-size:clamp(2.6rem,1.6rem + 4.4vw,5.4rem);line-height:1;margin:6px 0 18px}
-.exam__result .zh{font-weight:700;font-size:1.3rem;margin:0 0 10px}
-.exam__result .detail{font-family:var(--ui);color:var(--on-navy-muted);margin:0 0 24px}
-
 /* ============ References / footer ============ */
 .refs{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,6vw,96px)}
 .refs ol{margin:0;padding:0;list-style:none;counter-reset:r}
@@ -450,7 +334,6 @@ input[type=range].range:active{cursor:grabbing}
 <header class="masthead" id="masthead">
   <a class="masthead__mark" href="#cover" lang="en">With Flying Colours</a>
   <nav class="hoist" id="hoist" aria-label="章節進度：讀完一章升起一面旗"></nav>
-  <button class="sound" id="soundBtn" type="button" aria-pressed="true">音效</button>
 </header>
 
 <main>
@@ -467,20 +350,7 @@ input[type=range].range:active{cursor:grabbing}
     <img src="images/cover.webp" alt="大航海時代的英國水手在甲板上看見陸地" width="1320" height="735" fetchpriority="high">
     <figcaption>頂端那串信號旗，拼的正是 WITH FLYING COLOURS。把滑鼠移到旗子上看看。</figcaption>
   </figure>
-  <a class="cover__next" href="#contents">往下翻閱</a>
-</section>
-
-<!-- ================= CONTENTS ================= -->
-<section class="section" id="contents" data-stop>
-  <div class="wrap toc">
-    <div class="toc__head">
-      <h2>目錄</h2>
-      <p class="en" lang="en">Contents</p>
-      <p>考高分為什麼要說 <i lang="en">with flying colours</i>？這一路從戰場講到考場。</p>
-      <p>翻閱時，頁面頂端的桅繩會一面一面升起信號旗：七章讀完，正好拼出 <span lang="en">COLOURS</span>。文中有六個互動小遊戲，最後還有一場期末考。</p>
-    </div>
-    <ol class="toc__list" id="tocList"></ol>
-  </div>
+  <a class="cover__next" href="#ch1">往下翻閱</a>
 </section>
 
 <!-- ================= CH1 · C ================= -->
@@ -498,11 +368,9 @@ input[type=range].range:active{cursor:grabbing}
     <div class="grid">
       <div class="col-main">
         <p class="lead">考試考得很好，英文可以說 <i lang="en">pass with flying colours</i>。可是，為什麼是「飄揚的顏色」？</p>
-        <p class="prose">答案藏在一個大家以為很熟的字裡。點一下下面這個字：</p>
-        <button class="flip" id="flip" type="button" aria-pressed="false" aria-describedby="flipCap">
-          <span class="flip__in"><span class="flip__a" lang="en">colours</span><span class="flip__b" lang="en" aria-hidden="true">flags</span></span>
-        </button>
-        <p class="flip-cap" id="flipCap" aria-live="polite">點一下，翻出它在這個片語裡真正的意思。</p>
+        <p class="prose">答案藏在一個大家以為很熟的字裡：</p>
+        <p class="equation" lang="en"><span>colours</span><span class="equation__eq">=</span><span class="equation__b">flags</span></p>
+        <p class="equation-cap">字面意思：帶著飄揚的旗子。</p>
 
         <div class="defs">
           <div class="def">
@@ -526,27 +394,6 @@ input[type=range].range:active{cursor:grabbing}
     </div>
 
     <p class="pull" data-mark style="--mark:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 50%22%3E%3Crect width=%2260%22 height=%2250%22 fill=%22%23F3B61B%22/%3E%3Cpolygon points=%220,0 60,0 60,50%22 fill=%22%23C62127%22/%3E%3C/svg%3E')">所以 <i lang="en">pass with flying colours</i>，可不是說考卷畫得很繽紛。</p>
-
-    <!-- Game: signal station -->
-    <div class="game" id="station">
-      <div class="game__head">
-        <div>
-          <p class="game__tag">互動　旗語站</p>
-          <h3 class="game__title">把一個英文字掛上桅繩</h3>
-        </div>
-        <p class="game__hint">船和船之間，就是用旗子「說話」。國際信號旗一面代表一個字母，單獨掛出時也各有意思。輸入英文字母，再點任一面旗，看它單獨掛出時在說什麼。</p>
-      </div>
-      <div class="station__form">
-        <label class="sr-only" for="stationInput">要掛上桅繩的英文字</label>
-        <input class="station__input" id="stationInput" type="text" maxlength="12" value="PASS" placeholder="輸入英文字母，例如你的名字" autocomplete="off" spellcheck="false">
-        <button class="chip" type="button" data-word="PASS">PASS</button>
-        <button class="chip" type="button" data-word="COLOURS">COLOURS</button>
-        <button class="chip" type="button" data-word="NC">NC</button>
-      </div>
-      <div class="station__line"><div class="station__row" id="stationRow" role="group" aria-label="信號旗"></div></div>
-      <div class="station__meaning" id="stationMeaning" aria-live="polite">點任一面旗，看它單獨掛出時的意思。</div>
-      <p class="station__src">字母與單旗意義依《國際信號規則》（International Code of Signals）。</p>
-    </div>
   </div>
 </section>
 
@@ -582,36 +429,21 @@ input[type=range].range:active{cursor:grabbing}
       </div>
     </header>
 
-    <div class="game" id="shift">
-      <div class="game__head">
-        <div>
-          <p class="game__tag">互動　語意時光機</p>
-          <h3 class="game__title">拖動時間軸，看意思怎麼翻轉</h3>
-        </div>
-        <p class="game__hint">左邊是 17–18 世紀的戰場，右邊是 19 世紀以後的考場。拖到中間，看動詞和意思一起換掉。</p>
+    <div class="eras-shift">
+      <div class="era">
+        <p class="era__when">17–18 世紀　戰場</p>
+        <p class="era__phrase" lang="en"><span class="v">come off</span> with flying colours</p>
+        <p class="era__mean">保住體面、全身而退</p>
+        <p class="example__en" lang="en">The army surrendered the town but marched out with flying colours.</p>
+        <p class="example__zh">（這支軍隊雖然交出城池，卻帶著飄揚的軍旗體面撤出。）</p>
       </div>
-      <div class="shift__stage">
-        <div class="shift__era" id="eraA">
-          <p class="shift__when">17–18 世紀　戰場</p>
-          <p class="shift__phrase" lang="en"><span class="v">come off</span> with flying colours</p>
-          <p class="shift__mean">保住體面、全身而退</p>
-          <p class="shift__ex" lang="en">The army surrendered the town but marched out with flying colours.</p>
-          <p class="shift__zh">（這支軍隊雖然交出城池，卻帶著飄揚的軍旗體面撤出。）</p>
-        </div>
-        <div class="shift__era" id="eraB" aria-hidden="true">
-          <p class="shift__when">19 世紀以後　考場</p>
-          <p class="shift__phrase" lang="en"><span class="v">pass</span> with flying colours</p>
-          <p class="shift__mean">表現優異、大獲成功</p>
-          <p class="shift__ex" lang="en">She passed the exam with flying colours.</p>
-          <p class="shift__zh">（她以優異的成績通過了考試。）</p>
-        </div>
-      </div>
-      <p class="shift__year" id="shiftYear" aria-live="polite" lang="en">1612</p>
-      <div class="shift__control">
-        <span>1612</span>
-        <label class="sr-only" for="shiftRange">年代</label>
-        <input class="range" id="shiftRange" type="range" min="0" max="100" value="0" step="1">
-        <span>今天</span>
+      <svg class="era__arrow" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h34M30 13l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      <div class="era era--now">
+        <p class="era__when">19 世紀以後　考場</p>
+        <p class="era__phrase" lang="en"><span class="v">pass</span> with flying colours</p>
+        <p class="era__mean">表現優異、大獲成功</p>
+        <p class="example__en" lang="en">She passed the exam with flying colours.</p>
+        <p class="example__zh">（她以優異的成績通過了考試。）</p>
       </div>
     </div>
 
@@ -675,7 +507,7 @@ input[type=range].range:active{cursor:grabbing}
 </section>
 
 <!-- ================= CH4 · O ================= -->
-<section class="section" id="ch4" data-stop data-chapter>
+<section class="section" id="ch4" data-stop data-chapter style="padding-bottom:0">
   <div class="wrap">
     <header class="ch-head">
       <div class="ch-flag" aria-hidden="true"><span data-flag="O"></span><span class="ch-flag__cap"><b>O</b>Oscar</span></div>
@@ -721,39 +553,10 @@ input[type=range].range:active{cursor:grabbing}
     </div>
   </div>
 
-  <figure class="bleed">
+  <figure class="bleed" style="margin-bottom:0">
     <img src="images/false-to-true-colours.webp" alt="英國船降下西班牙旗、升起英格蘭旗" width="1672" height="941" loading="lazy">
     <figcaption><span><strong>傳說中的場景：降下假的西班牙旗，換上真的英格蘭旗</strong><b>圖 3</b>看桅杆上的兩面旗：一面正在降下，一面正在升起。</span></figcaption>
   </figure>
-
-  <div class="wrap">
-    <div class="game" id="verdict">
-      <div class="game__head">
-        <div>
-          <p class="game__tag">互動　說法鑑定所</p>
-          <h3 class="game__title"><span class="nw">有文獻撐腰，</span><span class="nw">還是好聽但靠不住？</span></h3>
-        </div>
-        <p class="game__hint">五則常聽到的說法，每一則都在前面讀過。你來蓋章鑑定。</p>
-      </div>
-      <div class="verdict__card" id="vCard">
-        <p class="verdict__count" id="vCount"></p>
-        <p class="verdict__claim" id="vClaim"></p>
-        <div class="verdict__btns" id="vBtns">
-          <button class="btn" type="button" data-v="record">有文獻撐腰</button>
-          <button class="btn" type="button" data-v="folk">好聽，但靠不住</button>
-        </div>
-        <div class="verdict__result" id="vResult" hidden aria-live="polite">
-          <div class="stamp" id="vStamp"></div>
-          <div class="verdict__expl"><p id="vExpl"></p><button class="btn btn--solid" type="button" id="vNext">下一則</button></div>
-        </div>
-      </div>
-      <div class="verdict__end" id="vEnd" hidden aria-live="polite">
-        <p class="verdict__score" id="vScore" lang="en"></p>
-        <p id="vEndText"></p>
-        <button class="btn" type="button" id="vAgain">再鑑定一次</button>
-      </div>
-    </div>
-  </div>
 </section>
 
 <!-- ================= CH5 · U ================= -->
@@ -789,60 +592,6 @@ input[type=range].range:active{cursor:grabbing}
       <p class="example__en" lang="en">The mayor nailed her colours to the mast and promised to save the old library.</p>
       <p class="example__zh">（市長公開表明立場，承諾一定保住舊圖書館。）</p>
     </div>
-
-    <div class="game" id="nailGame">
-      <div class="game__head">
-        <div>
-          <p class="game__tag">互動　釘旗挑戰</p>
-          <h3 class="game__title">換你當 Jack Crawford</h3>
-        </div>
-        <p class="game__hint">指針走進金色區域時按「釘！」（或空白鍵、點畫面）。釘滿四根，旗子就降不下來；失手三次，旗子會滑下桅杆。</p>
-      </div>
-      <div class="nail">
-        <svg class="nail__scene" id="nailScene" viewBox="0 0 400 290" role="img" aria-label="斷裂的桅杆與一面藍色將旗">
-          <defs>
-            <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E1729"/><stop offset=".7" stop-color="#2A3550"/><stop offset="1" stop-color="#4A4A52"/></linearGradient>
-            <linearGradient id="nwood" x1="0" x2="1"><stop offset="0" stop-color="#5A3C24"/><stop offset=".5" stop-color="#8A6440"/><stop offset="1" stop-color="#4A301C"/></linearGradient>
-            <linearGradient id="nflagg" x1="0" x2="1"><stop offset="0" stop-color="#173A78"/><stop offset=".5" stop-color="#2452A0"/><stop offset="1" stop-color="#173A78"/></linearGradient>
-          </defs>
-          <rect width="400" height="290" fill="url(#nsky)"/>
-          <filter id="nsoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
-          <g fill="#C9C2B3" opacity=".16" filter="url(#nsoft)"><circle cx="60" cy="200" r="46"/><circle cx="110" cy="214" r="34"/><circle cx="330" cy="196" r="52"/><circle cx="280" cy="220" r="30"/></g>
-          <g fill="#070E1B" opacity=".9"><path d="M22 246 h46 l-7 7 h-32z"/><path d="M34 246 V214 M50 246 V218" stroke="#070E1B" stroke-width="1.5"/><path d="M36 218 h12 v10 h-12z M36 230 h14 v10 h-14z" opacity=".7"/><path d="M318 247 h56 l-8 7 h-40z"/><path d="M334 247 V210 M352 247 V214" stroke="#070E1B" stroke-width="1.5"/><path d="M336 214 h14 v12 h-14z M336 229 h16 v12 h-16z" opacity=".7"/></g>
-          <path d="M0 252 Q40 246 80 252 T160 252 T240 252 T320 252 T400 252 V290 H0Z" fill="#0A1322"/>
-          <g stroke="#ECE8DF" stroke-opacity=".14" stroke-width="1"><path d="M158 74 L18 252"/><path d="M158 74 L392 252"/><path d="M158 120 L60 252"/><path d="M158 120 L340 252"/></g>
-          <rect x="150" y="56" width="16" height="234" fill="url(#nwood)"/>
-          <polygon points="150,58 153,47 157,55 160,42 163,53 166,46 166,58" fill="#8A6440"/>
-          <g id="nflag">
-            <path fill="url(#nflagg)" d="M166 64 C200 58 236 70 296 64 L296 146 C236 152 200 140 166 146 Z">
-              <animate attributeName="d" dur="1.3s" repeatCount="indefinite" values="M166 64 C200 58 236 70 296 64 L296 146 C236 152 200 140 166 146 Z;M166 64 C200 70 236 58 296 68 L296 150 C236 140 200 152 166 146 Z;M166 64 C200 58 236 70 296 64 L296 146 C236 152 200 140 166 146 Z"/>
-            </path>
-            <g class="nails">
-              <g class="nail-dot" data-i="0"><circle cx="160" cy="76" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="75" r="1.5" fill="#fff"/></g>
-              <g class="nail-dot" data-i="1"><circle cx="160" cy="96" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="95" r="1.5" fill="#fff"/></g>
-              <g class="nail-dot" data-i="2"><circle cx="160" cy="116" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="115" r="1.5" fill="#fff"/></g>
-              <g class="nail-dot" data-i="3"><circle cx="160" cy="136" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="135" r="1.5" fill="#fff"/></g>
-            </g>
-          </g>
-          <g id="hammer" style="--hy:translate(0px,0px)">
-            <g transform="translate(118 76)">
-              <rect x="-30" y="-3" width="34" height="6" rx="2" fill="#B08A5C"/>
-              <rect x="2" y="-11" width="12" height="22" rx="2" fill="#8E949E"/>
-            </g>
-          </g>
-          <rect id="nflash" width="400" height="290" fill="#FFE7B0"/>
-        </svg>
-        <div class="nail__panel">
-          <h4>指針進到金色區，就釘下去</h4>
-          <div class="meter" aria-hidden="true"><div class="meter__zone" id="nZone"></div><div class="meter__needle" id="nNeedle"></div></div>
-          <div class="nail__actions">
-            <button class="btn btn--solid nail__hit" id="nHit" type="button">開始釘旗</button>
-          </div>
-          <div class="nail__count"><span>釘子<b id="nNails">0</b>／4</span><span>失手<b id="nMiss">0</b>／3</span></div>
-          <p class="nail__msg" id="nMsg" aria-live="polite"></p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -859,52 +608,40 @@ input[type=range].range:active{cursor:grabbing}
     </header>
     <p class="lead prose">這三個都跟降旗有關：<i lang="en">strike</i> 是直接投降，<i lang="en">lower</i> 是退一步，<i lang="en">go down with colours flying</i> 則是輸了也輸得有骨氣。</p>
 
-    <div class="game" id="strike">
-      <div class="game__head">
-        <div>
-          <p class="game__tag">互動　降旗劇場</p>
-          <h3 class="game__title">選一個片語，看旗子怎麼說話</h3>
+    <div class="trio" style="margin-top:48px">
+      <article class="phrase">
+        <svg class="phrase__icon" viewBox="0 0 72 72" aria-hidden="true"><path d="M8 64h56" stroke="currentColor" stroke-width="1.5" opacity=".5"/><path d="M22 64V6" stroke="currentColor" stroke-width="2.4"/><path d="M23 46c5 1 9 5 11 16H23z" fill="#C62127"/></svg>
+        <h3 class="phrase__en" lang="en">strike one’s colours</h3>
+        <p class="phrase__zh">投降、放棄</p>
+        <p>把旗子降下來，就是對敵人說：「好啦，你贏了。」</p>
+        <div class="example">
+          <p class="example__label">例句</p>
+          <p class="example__en" lang="en">After three hours of arguing, he finally struck his colours.</p>
+          <p class="example__zh">（爭論了三個小時，他終於舉白旗投降。）</p>
         </div>
-        <p class="game__hint">同樣是一面旗，降到底、降一半，或是船沉了旗還在：意思完全不同。</p>
-      </div>
-      <div class="strike">
-        <svg class="strike__scene" id="strikeScene" viewBox="0 0 480 300" data-state="idle" role="img" aria-label="海上一艘帆船，桅頂掛著一面紅旗">
-          <defs>
-            <linearGradient id="ssky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16223A"/><stop offset="1" stop-color="#34425F"/></linearGradient>
-          </defs>
-          <rect width="480" height="300" fill="url(#ssky)"/>
-          <circle cx="404" cy="62" r="17" fill="#ECE8DF" opacity=".85"/>
-          <rect y="212" width="480" height="88" fill="#0E1D36"/>
-          <g id="sship">
-            <path d="M244 18 L356 184 M244 18 L146 186" stroke="#ECE8DF" stroke-opacity=".35" stroke-width="1"/>
-            <path d="M206 66 H282 Q291 84 281 102 H207 Q197 84 206 66Z" fill="#ECE8DF" opacity=".88"/>
-            <path d="M194 114 H294 Q305 140 292 164 H196 Q183 140 194 114Z" fill="#ECE8DF" opacity=".88"/>
-            <path d="M200 66 H288 M188 114 H300" stroke="#ECE8DF" stroke-width="2.4"/>
-            <path d="M244 190 V16" stroke="#ECE8DF" stroke-width="3"/>
-            <path d="M136 182 Q244 194 356 180 L338 212 Q244 224 156 212 Z" fill="#ECE8DF"/>
-            <path d="M148 196 Q244 206 346 194" stroke="#16223A" stroke-opacity=".45" stroke-width="1.2" fill="none"/>
-            <path d="M352 184 L394 166" stroke="#ECE8DF" stroke-width="2"/>
-            <g id="sflag">
-              <path fill="#C62127" d="M246 20 C262 15 280 25 300 20 L300 54 C280 59 262 49 246 54 Z">
-                <animate attributeName="d" dur="1.4s" repeatCount="indefinite" values="M246 20 C262 15 280 25 300 20 L300 54 C280 59 262 49 246 54 Z;M246 20 C262 26 280 15 300 23 L300 57 C280 49 262 60 246 54 Z;M246 20 C262 15 280 25 300 20 L300 54 C280 59 262 49 246 54 Z"/>
-              </path>
-            </g>
-          </g>
-          <g>
-            <path d="M-40 216 Q-20 208 0 216 T40 216 T80 216 T120 216 T160 216 T200 216 T240 216 T280 216 T320 216 T360 216 T400 216 T440 216 T480 216 T520 216 V300 H-40Z" fill="#0E1D36"/>
-            <path d="M-40 216 Q-20 208 0 216 T40 216 T80 216 T120 216 T160 216 T200 216 T240 216 T280 216 T320 216 T360 216 T400 216 T440 216 T480 216 T520 216" fill="none" stroke="#ECE8DF" stroke-opacity=".35" stroke-width="1.2"/>
-            <animateTransform attributeName="transform" type="translate" values="0 0;40 0" dur="3s" repeatCount="indefinite"/>
-          </g>
-        </svg>
-        <div>
-          <div class="strike__opts" role="group" aria-label="選擇片語">
-            <button class="sopt" type="button" data-s="strike" aria-pressed="false"><b lang="en">strike one’s colours</b><span>投降、放棄</span></button>
-            <button class="sopt" type="button" data-s="lower" aria-pressed="false"><b lang="en">lower one’s colours</b><span>讓步、收回主張</span></button>
-            <button class="sopt" type="button" data-s="sink" aria-pressed="false"><b lang="en">go down with colours flying</b><span>雖敗猶榮</span></button>
-          </div>
-          <div class="strike__out" id="strikeOut" aria-live="polite"><p class="zh">點上面任一個片語，旗子就會照著做。</p></div>
+      </article>
+      <article class="phrase">
+        <svg class="phrase__icon" viewBox="0 0 72 72" aria-hidden="true"><path d="M8 64h56" stroke="currentColor" stroke-width="1.5" opacity=".5"/><path d="M22 64V6" stroke="currentColor" stroke-width="2.4"/><path d="M22 6h8M22 64" stroke="currentColor" stroke-width="1" opacity=".4" stroke-dasharray="2 3"/><path d="M23 28c8-3 14 3 24 0v15c-10 3-16-3-24 0z" fill="#C62127"/></svg>
+        <h3 class="phrase__en" lang="en">lower one’s colours</h3>
+        <p class="phrase__zh">讓步、收回主張</p>
+        <p>旗子放低一點，就是態度放軟、退一步。</p>
+        <div class="example">
+          <p class="example__label">例句</p>
+          <p class="example__en" lang="en">Neither side was willing to lower its colours.</p>
+          <p class="example__zh">（雙方都不願意讓步。）</p>
         </div>
-      </div>
+      </article>
+      <article class="phrase">
+        <svg class="phrase__icon" viewBox="0 0 72 72" aria-hidden="true"><path d="M30 60V6" stroke="currentColor" stroke-width="2.4"/><path d="M31 7c8-3 14 3 24 0v15c-10 3-16-3-24 0z" fill="#C62127"/><path d="M14 52h34l-5 10H19z" fill="currentColor" opacity=".35"/><path d="M2 56q6-4 12 0t12 0 12 0 12 0 12 0 12 0V72H2z" fill="#1C4E9A" opacity=".85"/></svg>
+        <h3 class="phrase__en" lang="en">go down with colours flying</h3>
+        <p class="phrase__zh">雖敗猶榮</p>
+        <p>船都要沉了，旗子還在飄：輸是輸了，但輸得很有骨氣。</p>
+        <div class="example">
+          <p class="example__label">例句</p>
+          <p class="example__en" lang="en">The team lost the final, but they went down with colours flying.</p>
+          <p class="example__zh">（這支球隊雖然輸了決賽，卻輸得轟轟烈烈、雖敗猶榮。）</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1028,34 +765,95 @@ input[type=range].range:active{cursor:grabbing}
   </div>
 </section>
 
-<!-- ================= EXAM ================= -->
-<section class="section section--deep" id="exam" data-stop>
+<!-- ================= GAMES ================= -->
+<section class="section section--deep" id="games" data-stop>
   <div class="wrap">
-    <header class="ch-head" style="grid-template-columns:1fr;margin-bottom:0">
+    <header class="games-head">
       <div>
-        <p class="ch-no">期末考</p>
-        <h2 class="ch-title">你能 <span class="en-i" lang="en">pass with flying colours</span> 嗎？</h2>
-        <p class="ch-en">十題填空，用的全是這份報告裡的例句。答對八題以上，頂端桅繩上的旗子全部升起。</p>
+        <p class="ch-no">附錄　小遊戲</p>
+        <h2 class="ch-title">報告結束，玩兩個小遊戲</h2>
+        <p class="ch-en">只要按按鈕，一分鐘內就能玩完。</p>
       </div>
+      <button class="sound" id="soundBtn" type="button" aria-pressed="true">音效：開</button>
     </header>
-    <div class="game" id="examGame">
-      <ol class="exam__pips" id="exPips" aria-label="作答進度"></ol>
-      <div id="exQ">
-        <p class="exam__num" id="exNum"></p>
-        <p class="exam__sentence" id="exSentence" lang="en"></p>
-        <div class="exam__opts" id="exOpts" role="group" aria-label="選項"></div>
-        <div class="exam__fb" id="exFb" hidden aria-live="polite">
-          <p class="verdict-line" id="exVerdict"></p>
-          <p id="exZh" style="color:var(--on-navy-muted)"></p>
-          <button class="btn btn--solid" type="button" id="exNext">下一題</button>
+    <div class="game" id="verdict">
+      <div class="game__head">
+        <div>
+          <p class="game__tag">遊戲一　說法鑑定所</p>
+          <h3 class="game__title"><span class="nw">有文獻撐腰，</span><span class="nw">還是好聽但靠不住？</span></h3>
+        </div>
+        <p class="game__hint">五則常聽到的說法，都在報告裡出現過。你來蓋章鑑定。</p>
+      </div>
+      <div class="verdict__card" id="vCard">
+        <p class="verdict__count" id="vCount"></p>
+        <p class="verdict__claim" id="vClaim"></p>
+        <div class="verdict__btns" id="vBtns">
+          <button class="btn" type="button" data-v="record">有文獻撐腰</button>
+          <button class="btn" type="button" data-v="folk">好聽，但靠不住</button>
+        </div>
+        <div class="verdict__result" id="vResult" hidden aria-live="polite">
+          <div class="stamp" id="vStamp"></div>
+          <div class="verdict__expl"><p id="vExpl"></p><button class="btn btn--solid" type="button" id="vNext">下一則</button></div>
         </div>
       </div>
-      <div class="exam__result" id="exResult" hidden aria-live="polite">
-        <p class="game__tag">成績單</p>
-        <p class="exam__big" id="exBig" lang="en"></p>
-        <p class="zh" id="exZhResult"></p>
-        <p class="detail" id="exDetail"></p>
-        <button class="btn" type="button" id="exAgain">再考一次</button>
+      <div class="verdict__end" id="vEnd" hidden aria-live="polite">
+        <p class="verdict__score" id="vScore" lang="en"></p>
+        <p id="vEndText"></p>
+        <button class="btn" type="button" id="vAgain">再鑑定一次</button>
+      </div>
+    </div>
+
+    <div class="game" id="nailGame">
+      <div class="game__head">
+        <div>
+          <p class="game__tag">遊戲二　釘旗挑戰</p>
+          <h3 class="game__title">換你當 Jack Crawford</h3>
+        </div>
+        <p class="game__hint">1797 年，水手 Jack Crawford 把旗子釘回斷掉的桅杆。指針走進金色區域時按「釘！」，釘滿四根就成功；失手三次，旗子會滑下來。</p>
+      </div>
+      <div class="nail">
+        <svg class="nail__scene" id="nailScene" viewBox="0 0 400 290" role="img" aria-label="斷裂的桅杆與一面藍色將旗">
+          <defs>
+            <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E1729"/><stop offset=".7" stop-color="#2A3550"/><stop offset="1" stop-color="#4A4A52"/></linearGradient>
+            <linearGradient id="nwood" x1="0" x2="1"><stop offset="0" stop-color="#5A3C24"/><stop offset=".5" stop-color="#8A6440"/><stop offset="1" stop-color="#4A301C"/></linearGradient>
+            <linearGradient id="nflagg" x1="0" x2="1"><stop offset="0" stop-color="#173A78"/><stop offset=".5" stop-color="#2452A0"/><stop offset="1" stop-color="#173A78"/></linearGradient>
+          </defs>
+          <rect width="400" height="290" fill="url(#nsky)"/>
+          <filter id="nsoft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+          <g fill="#C9C2B3" opacity=".16" filter="url(#nsoft)"><circle cx="60" cy="200" r="46"/><circle cx="110" cy="214" r="34"/><circle cx="330" cy="196" r="52"/><circle cx="280" cy="220" r="30"/></g>
+          <g fill="#070E1B" opacity=".9"><path d="M22 246 h46 l-7 7 h-32z"/><path d="M34 246 V214 M50 246 V218" stroke="#070E1B" stroke-width="1.5"/><path d="M36 218 h12 v10 h-12z M36 230 h14 v10 h-14z" opacity=".7"/><path d="M318 247 h56 l-8 7 h-40z"/><path d="M334 247 V210 M352 247 V214" stroke="#070E1B" stroke-width="1.5"/><path d="M336 214 h14 v12 h-14z M336 229 h16 v12 h-16z" opacity=".7"/></g>
+          <path d="M0 252 Q40 246 80 252 T160 252 T240 252 T320 252 T400 252 V290 H0Z" fill="#0A1322"/>
+          <g stroke="#ECE8DF" stroke-opacity=".14" stroke-width="1"><path d="M158 74 L18 252"/><path d="M158 74 L392 252"/><path d="M158 120 L60 252"/><path d="M158 120 L340 252"/></g>
+          <rect x="150" y="56" width="16" height="234" fill="url(#nwood)"/>
+          <polygon points="150,58 153,47 157,55 160,42 163,53 166,46 166,58" fill="#8A6440"/>
+          <g id="nflag">
+            <path fill="url(#nflagg)" d="M166 64 C200 58 236 70 296 64 L296 146 C236 152 200 140 166 146 Z">
+              <animate attributeName="d" dur="1.3s" repeatCount="indefinite" values="M166 64 C200 58 236 70 296 64 L296 146 C236 152 200 140 166 146 Z;M166 64 C200 70 236 58 296 68 L296 150 C236 140 200 152 166 146 Z;M166 64 C200 58 236 70 296 64 L296 146 C236 152 200 140 166 146 Z"/>
+            </path>
+            <g class="nails">
+              <g class="nail-dot" data-i="0"><circle cx="160" cy="76" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="75" r="1.5" fill="#fff"/></g>
+              <g class="nail-dot" data-i="1"><circle cx="160" cy="96" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="95" r="1.5" fill="#fff"/></g>
+              <g class="nail-dot" data-i="2"><circle cx="160" cy="116" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="115" r="1.5" fill="#fff"/></g>
+              <g class="nail-dot" data-i="3"><circle cx="160" cy="136" r="4.2" fill="#C9CDD4"/><circle cx="159" cy="135" r="1.5" fill="#fff"/></g>
+            </g>
+          </g>
+          <g id="hammer" style="--hy:translate(0px,0px)">
+            <g transform="translate(118 76)">
+              <rect x="-30" y="-3" width="34" height="6" rx="2" fill="#B08A5C"/>
+              <rect x="2" y="-11" width="12" height="22" rx="2" fill="#8E949E"/>
+            </g>
+          </g>
+          <rect id="nflash" width="400" height="290" fill="#FFE7B0"/>
+        </svg>
+        <div class="nail__panel">
+          <h4>指針進到金色區，就釘下去</h4>
+          <div class="meter" aria-hidden="true"><div class="meter__zone" id="nZone"></div><div class="meter__needle" id="nNeedle"></div></div>
+          <div class="nail__actions">
+            <button class="btn btn--solid nail__hit" id="nHit" type="button">開始釘旗</button>
+          </div>
+          <div class="nail__count"><span>釘子<b id="nNails">0</b>／4</span><span>失手<b id="nMiss">0</b>／3</span></div>
+          <p class="nail__msg" id="nMsg" aria-live="polite"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -1143,21 +941,12 @@ function flagSVG(l, attrs = '') {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 50" ${attrs}>${FLAG[l]()}${OUTLINE(l)}</svg>`;
 }
 const NATO = {A:'Alfa',B:'Bravo',C:'Charlie',D:'Delta',E:'Echo',F:'Foxtrot',G:'Golf',H:'Hotel',I:'India',J:'Juliett',K:'Kilo',L:'Lima',M:'Mike',N:'November',O:'Oscar',P:'Papa',Q:'Quebec',R:'Romeo',S:'Sierra',T:'Tango',U:'Uniform',V:'Victor',W:'Whiskey',X:'X-ray',Y:'Yankee',Z:'Zulu'};
-const MEANING = {
-  A:'我有潛水員在水下，請慢速遠離。', B:'我正在裝卸或載運危險貨物。', C:'是（肯定）。', D:'請避開我，我操縱困難。',
-  E:'我正向右轉向。', F:'我失去操縱能力，請與我聯絡。', G:'我需要引水人。', H:'我船上有引水人。',
-  I:'我正向左轉向。', J:'我船失火且載有危險貨物，請遠離。', K:'我想與你通訊。', L:'請立即停船。',
-  M:'我船已停俥，對水沒有速度。', N:'不（否定）。', O:'有人落水！', P:'俗稱 Blue Peter：船在港內時，表示即將出航，全員回船。',
-  Q:'我船無疫，請求進港檢疫許可。', R:'單獨掛出時沒有指定意義。', S:'我正在倒俥。', T:'請避開我。',
-  U:'你正駛向危險。', V:'我需要協助。', W:'我需要醫療協助。', X:'停止你的意圖，注意我的信號。',
-  Y:'我正在走錨。', Z:'我需要拖船。1905 年對馬海戰，東鄉平八郎曾掛出 Z 旗激勵全艦隊。'
-};
 $$('[data-flag]').forEach(el => { el.innerHTML = flagSVG(el.dataset.flag); });
 
 /* ---------------- Sound (Web Audio, tiny) ---------------- */
 let actx = null, soundOn = true;
 const soundBtn = $('#soundBtn');
-soundBtn.addEventListener('click', () => { soundOn = !soundOn; soundBtn.setAttribute('aria-pressed', String(soundOn)); });
+soundBtn.addEventListener('click', () => { soundOn = !soundOn; soundBtn.setAttribute('aria-pressed', String(soundOn)); soundBtn.textContent = soundOn ? '音效：開' : '音效：關'; });
 function ctx() { if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; } } if (actx.state === 'suspended') actx.resume(); return actx; }
 function tone(freq, dur, type = 'sine', vol = .08, when = 0) {
   if (!soundOn) return; const a = ctx(); if (!a) return;
@@ -1183,18 +972,15 @@ const sfx = {
   thunk
 };
 
-/* ---------------- Chapters, hoist, contents ---------------- */
+/* ---------------- Chapters and hoist ---------------- */
 const CHAPTERS = [
-  { id:'ch1', l:'C', no:'一', t:'「colours」其實是旗子', en:'Colours are flags', g:'旗語站' },
-  { id:'ch2', l:'O', no:'二', t:'傳說與文獻', en:'The legend and the record' },
-  { id:'ch3', l:'L', no:'三', t:'從全身而退到大獲全勝', en:'From retreat to triumph', g:'語意時光機' },
-  { id:'family', l:null, no:'間奏', t:'片語家族地圖', en:'The family' },
-  { id:'ch4', l:'O', no:'四', t:'掛假旗，亮真旗', en:'False colours, true colours', g:'說法鑑定所' },
-  { id:'ch5', l:'U', no:'五', t:'把旗子釘上桅杆', en:'Nailed to the mast', g:'釘旗挑戰' },
-  { id:'ch6', l:'R', no:'六', t:'降下旗幟', en:'Striking the colours', g:'降旗劇場' },
-  { id:'ch7', l:'S', no:'七', t:'團旗與典禮', en:'Regimental colours' },
-  { id:'coda', l:null, no:'終章', t:'片語是一塊語言化石', en:'A linguistic fossil' },
-  { id:'exam', l:null, no:'期末考', t:'你能 pass with flying colours 嗎？', en:'The final exam', g:'十題填空' },
+  { id:'ch1', l:'C', no:'一', t:'「colours」其實是旗子' },
+  { id:'ch2', l:'O', no:'二', t:'傳說與文獻' },
+  { id:'ch3', l:'L', no:'三', t:'從全身而退到大獲全勝' },
+  { id:'ch4', l:'O', no:'四', t:'掛假旗，亮真旗' },
+  { id:'ch5', l:'U', no:'五', t:'把旗子釘上桅杆' },
+  { id:'ch6', l:'R', no:'六', t:'降下旗幟' },
+  { id:'ch7', l:'S', no:'七', t:'團旗與典禮' },
 ];
 const hoist = $('#hoist');
 const HOISTED = CHAPTERS.filter(c => c.l);
@@ -1206,16 +992,6 @@ HOISTED.forEach((c, i) => {
   b.addEventListener('click', () => document.getElementById(c.id).scrollIntoView({ behavior: RM ? 'auto' : 'smooth' }));
   hoist.appendChild(b);
 });
-const toc = $('#tocList');
-CHAPTERS.forEach(c => {
-  const li = document.createElement('li');
-  if (!c.l) li.className = 'is-minor';
-  const flag = c.l ? flagSVG(c.l, 'aria-hidden="true"') : '';
-  const title = c.t.replace('pass with flying colours', '<i lang="en">pass with flying colours</i>').replace('「colours」', '「<span lang="en">colours</span>」');
-  li.innerHTML = `<a href="#${c.id}"><span class="toc__flag">${flag}</span><span class="toc__no">${c.no.length === 1 ? '第' + c.no + '章' : c.no}</span><span class="toc__t">${title}<small lang="en">${c.en}</small></span>${c.g ? `<span class="toc__game">互動｜${c.g}</span>` : '<span></span>'}</a>`;
-  toc.appendChild(li);
-});
-
 const masthead = $('#masthead');
 const cover = $('#cover');
 const hoistBtns = $$('.hoist__btn');
@@ -1270,57 +1046,7 @@ drawBunting();
 let bw = innerWidth;
 addEventListener('resize', () => { if (Math.abs(innerWidth - bw) > 40) { bw = innerWidth; drawBunting(true); } });
 
-/* ---------------- Ch1: flip + station ---------------- */
-const flip = $('#flip'), flipCap = $('#flipCap');
-flip.addEventListener('click', () => {
-  const on = flip.getAttribute('aria-pressed') !== 'true';
-  flip.setAttribute('aria-pressed', String(on)); sfx.tick();
-  flipCap.innerHTML = on ? '<b>colours = flags</b>　字面意思：帶著飄揚的旗子。再點一下翻回來。' : '點一下，翻出它在這個片語裡真正的意思。';
-});
-
-const stIn = $('#stationInput'), stRow = $('#stationRow'), stMean = $('#stationMeaning');
-function hoistWord(raw) {
-  const word = raw.toUpperCase().replace(/[^A-Z ]/g, '').slice(0, 12);
-  stRow.innerHTML = '';
-  let k = 0;
-  [...word].forEach(ch => {
-    if (ch === ' ') { const g = document.createElement('span'); g.className = 'sgap'; stRow.appendChild(g); return; }
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'sflag'; b.style.animationDelay = (k++ * 70) + 'ms';
-    b.setAttribute('aria-pressed', 'false'); b.setAttribute('aria-label', `${ch}，${NATO[ch]} 旗`);
-    b.innerHTML = flagSVG(ch, 'aria-hidden="true"') + `<span lang="en">${ch}</span>`;
-    b.addEventListener('click', () => {
-      $$('.sflag', stRow).forEach(x => x.setAttribute('aria-pressed', 'false'));
-      b.setAttribute('aria-pressed', 'true'); sfx.tick();
-      stMean.innerHTML = `<b lang="en">${ch}　${NATO[ch]}</b>${MEANING[ch]}`;
-    });
-    stRow.appendChild(b);
-  });
-  if (word.replace(/ /g, '') === 'NC') stMean.innerHTML = '<b lang="en">N + C</b>兩面一起掛：我船遇險，需要立即援助。這是國際通用的求救信號。';
-  else if (!word.trim()) stMean.textContent = '輸入英文字母，就會掛上桅繩。';
-  else stMean.textContent = '點任一面旗，看它單獨掛出時的意思。';
-}
-let stT = 0;
-stIn.addEventListener('input', () => { clearTimeout(stT); stT = setTimeout(() => hoistWord(stIn.value), 220); });
-$$('.chip[data-word]').forEach(c => c.addEventListener('click', () => { stIn.value = c.dataset.word; hoistWord(c.dataset.word); }));
-hoistWord(stIn.value);
-
-/* ---------------- Ch3: meaning shift ---------------- */
-const range = $('#shiftRange'), eraA = $('#eraA'), eraB = $('#eraB'), shiftYear = $('#shiftYear');
-function shift() {
-  const v = +range.value; range.style.setProperty('--p', v + '%');
-  const year = Math.round(1612 + (2026 - 1612) * v / 100);
-  // crossfade between ~1790 and ~1830
-  const a = Math.min(1, Math.max(0, (year - 1790) / 40));
-  eraA.style.opacity = 1 - a; eraB.style.opacity = a;
-  eraA.style.filter = `blur(${(a * 6).toFixed(1)}px)`; eraB.style.filter = `blur(${((1 - a) * 6).toFixed(1)}px)`;
-  eraA.style.transform = `translateX(${(-a * 24).toFixed(1)}px)`; eraB.style.transform = `translateX(${((1 - a) * 24).toFixed(1)}px)`;
-  eraA.setAttribute('aria-hidden', String(a > .5)); eraB.setAttribute('aria-hidden', String(a <= .5));
-  shiftYear.textContent = v >= 100 ? '今天' : (v <= 0 ? '1612' : '約 ' + year + ' 年');
-}
-range.addEventListener('input', shift); shift();
-
-/* ---------------- Ch4: verdict game ---------------- */
+/* ---------------- Game 1: fact or folklore ---------------- */
 const CLAIMS = [
   { c:'「<i lang=\"en\">with flying colours</i> 來自打了勝仗、掛滿旗子回港的船。」', a:'folk', e:'這是最流行的說法，但最早的文獻（1612 年）講的是陸軍，而且意思只是「全身而退」。' },
   { c:'「17–18 世紀的人說的是 <i lang=\"en\">come off with flying colours</i>，意思是保住體面、全身而退。」', a:'record', e:'沒錯。動詞後來才從 <i lang="en">come off</i>（脫身）換成 <i lang="en">pass</i>（過關），一路從戰場走進了考場。' },
@@ -1356,7 +1082,7 @@ vNext.addEventListener('click', () => {
 $('#vAgain').addEventListener('click', () => { vi = 0; vscore = 0; vEnd.hidden = true; vCard.hidden = false; vShow(); });
 vShow();
 
-/* ---------------- Ch5: nail game ---------------- */
+/* ---------------- Game 2: nail the colours ---------------- */
 const nScene = $('#nailScene'), nZone = $('#nZone'), nNeedle = $('#nNeedle'), nHit = $('#nHit'), nMsg = $('#nMsg'), nflag = $('#nflag'), hammer = $('#hammer'), nflash = $('#nflash');
 const NAIL_Y = [76, 96, 116, 136], SLIP = [0, 42, 84, 120];
 const LEVELS = [{ w:.26, T:950 }, { w:.22, T:780 }, { w:.18, T:640 }, { w:.15, T:540 }];
@@ -1377,6 +1103,7 @@ function nLoop(ts) {
   N.raf = requestAnimationFrame(nLoop);
 }
 function nStart() {
+  if (hoist.classList.contains('is-celebrating')) { hoist.classList.remove('is-celebrating'); onScroll(); }
   N = { ...N, state:'play', nails:0, miss:0, t0:0, start:performance.now(), flashT:performance.now() + 1500 };
   $$('.nail-dot').forEach(d => d.classList.remove('on'));
   nSlip(); nHammerTo(0); nSetZone();
@@ -1388,7 +1115,10 @@ function nEnd(win) {
   N.state = win ? 'won' : 'lost'; cancelAnimationFrame(N.raf);
   const secs = ((performance.now() - N.start) / 1000).toFixed(1);
   nHit.textContent = '再玩一次';
-  if (win) { nMsg.innerHTML = `<strong>釘牢了！</strong>用了 ${secs} 秒、失手 ${N.miss} 次。旗子想降也降不了，這就是 <i lang="en">nail one’s colours to the mast</i>：公開表態、絕不退讓。`; sfx.fanfare(); }
+  if (win) {
+    nMsg.innerHTML = `<strong>釘牢了！</strong>用了 ${secs} 秒、失手 ${N.miss} 次。旗子想降也降不了，頂端的旗子也全部為你升起：<i lang="en">with flying colours</i>！`;
+    sfx.fanfare(); hoist.classList.add('is-celebrating'); hoistBtns.forEach(b => b.classList.add('is-up')); confetti();
+  }
   else { nMsg.innerHTML = `<strong>旗子滑下來了。</strong>遠遠看去，就像在喊「我投降」。再來一次？`; sfx.bad(); }
 }
 function nStrike() {
@@ -1420,88 +1150,6 @@ addEventListener('keydown', e => {
 });
 nHammerTo(0); nSetZone(); nNeedle.style.left = '0%';
 nMsg.textContent = '按「開始釘旗」。';
-
-/* ---------------- Ch6: strike scene ---------------- */
-const STRIKE = {
-  strike: { en:'After three hours of arguing, he finally struck his colours.', zh:'（爭論了三個小時，他終於舉白旗投降。）', d:'把旗子降下來，就是對敵人說：「好啦，你贏了。」' },
-  lower:  { en:'Neither side was willing to lower its colours.', zh:'（雙方都不願意讓步。）', d:'旗子放低一點，就是態度放軟、退一步。' },
-  sink:   { en:'The team lost the final, but they went down with colours flying.', zh:'（這支球隊雖然輸了決賽，卻輸得轟轟烈烈、雖敗猶榮。）', d:'船都要沉了，旗子還在飄：輸是輸了，但輸得很有骨氣。' },
-};
-const sScene = $('#strikeScene'), sOut = $('#strikeOut');
-$$('.sopt').forEach(b => b.addEventListener('click', () => {
-  const k = b.dataset.s;
-  $$('.sopt').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-  sScene.classList.add('reset'); sScene.dataset.state = 'idle'; void sScene.getBoundingClientRect();
-  requestAnimationFrame(() => requestAnimationFrame(() => { sScene.classList.remove('reset'); sScene.dataset.state = k; }));
-  const s = STRIKE[k]; sfx.tick();
-  sOut.innerHTML = `<p>${s.d}</p><p class="en" lang="en">${s.en}</p><p class="zh">${s.zh}</p>`;
-}));
-
-/* ---------------- Exam ---------------- */
-const QS = [
-  { s:'She passed the exam ___.', a:'with flying colours', o:['under false colours','with colours lowered'], zh:'她以優異的成績通過了考試。', m:'pass with flying colours：表現優異、大獲成功' },
-  { s:'The “charity” was sailing ___; it was really a sales company.', a:'under false colours', o:['with flying colours','to the colours'], zh:'那個「慈善機構」其實是掛羊頭賣狗肉，本質上是一間推銷公司。', m:'sail under false colours：冒充、欺騙' },
-  { s:'He showed his ___ when he refused to help his own team.', a:'true colours', o:['false colours','flying colours'], zh:'他拒絕幫忙自己的團隊，這才露出了真面目。', m:'show one’s true colours：露出真面目' },
-  { s:'The mayor ___ to the mast and promised to save the old library.', a:'nailed her colours', o:['struck her colours','lowered her colours'], zh:'市長公開表明立場，承諾一定保住舊圖書館。', m:'nail one’s colours to the mast：公開表態、絕不退讓' },
-  { s:'After three hours of arguing, he finally ___.', a:'struck his colours', o:['showed his true colours','rallied to the colours'], zh:'爭論了三個小時，他終於舉白旗投降。', m:'strike one’s colours：投降、放棄' },
-  { s:'Neither side was willing to ___ its colours.', a:'lower', o:['nail','troop'], zh:'雙方都不願意讓步。', m:'lower one’s colours：讓步、收回主張' },
-  { s:'The team lost the final, but they went down ___.', a:'with colours flying', o:['under false colours','to the colours'], zh:'這支球隊雖然輸了決賽，卻輸得轟轟烈烈、雖敗猶榮。', m:'go down with colours flying：雖敗猶榮' },
-  { s:'When the school faced closure, its former students ___ to the colours.', a:'rallied', o:['sailed','lowered'], zh:'學校面臨關閉時，校友們紛紛挺身響應。', m:'rally to the colours：響應號召、挺身支持' },
-  { s:'When the war broke out, my great-grandfather was ___ to the colours.', a:'called', o:['nailed','trooped'], zh:'戰爭爆發時，我的曾祖父被徵召入伍。', m:'be called to the colours：被徵召入伍' },
-  { s:'The ___ led the parade down the main street.', a:'colour guard', o:['false colours','flying colours'], zh:'護旗隊帶領遊行隊伍走過大街。', m:'colour guard：護旗隊' },
-];
-const PIP_FLAGS = 'PASSEDWITH'.split('');
-const exPips = $('#exPips'), exNum = $('#exNum'), exSent = $('#exSentence'), exOpts = $('#exOpts'), exFb = $('#exFb'), exVerdict = $('#exVerdict'), exZh = $('#exZh'), exNext = $('#exNext'), exQ = $('#exQ'), exResult = $('#exResult');
-let qi = 0, qscore = 0, order = [];
-const shuffle = a => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
-function exReset() {
-  qi = 0; qscore = 0; order = QS.map((_, i) => i);
-  exPips.innerHTML = QS.map((_, i) => `<li>${flagSVG(PIP_FLAGS[i], 'aria-hidden="true"')}</li>`).join('');
-  exResult.hidden = true; exQ.hidden = false; exShow();
-}
-function exShow() {
-  const q = QS[order[qi]];
-  $$('li', exPips).forEach((li, i) => li.classList.toggle('now', i === qi));
-  exNum.textContent = `第 ${qi + 1}／${QS.length} 題`;
-  exSent.innerHTML = q.s.replace('___', '<span class="blank" id="exBlank">&nbsp;</span>');
-  exOpts.innerHTML = '';
-  shuffle([q.a, ...q.o]).forEach(opt => {
-    const b = document.createElement('button'); b.type = 'button'; b.className = 'btn'; b.lang = 'en'; b.textContent = opt;
-    b.addEventListener('click', () => exAnswer(b, opt)); exOpts.appendChild(b);
-  });
-  exFb.hidden = true;
-}
-function exAnswer(btn, opt) {
-  const q = QS[order[qi]], ok = opt === q.a;
-  $$('button', exOpts).forEach(b => { b.disabled = true; if (b.textContent === q.a) b.classList.add('is-right'); });
-  if (!ok) btn.classList.add('is-wrong');
-  const blank = $('#exBlank'); blank.textContent = q.a; if (!ok) blank.classList.add('bad');
-  const pip = $$('li', exPips)[qi]; pip.classList.add(ok ? 'ok' : 'bad');
-  if (ok) { qscore++; sfx.good(); } else sfx.bad();
-  exVerdict.innerHTML = ok ? `<span style="color:var(--gold-soft)">答對了。</span><span lang="en">${q.m.split('：')[0]}</span>：${q.m.split('：')[1]}` : `<span style="color:var(--red-on-navy)">差一點。</span>正確答案是 <i lang="en">${q.a}</i>。<span lang="en">${q.m.split('：')[0]}</span>：${q.m.split('：')[1]}`;
-  exZh.textContent = q.zh;
-  exNext.textContent = qi === QS.length - 1 ? '看成績' : '下一題';
-  exFb.hidden = false; exNext.focus({ preventScroll: true });
-}
-exNext.addEventListener('click', () => { qi++; if (qi < QS.length) exShow(); else exFinish(); });
-function exFinish() {
-  exQ.hidden = true; exResult.hidden = false;
-  $$('li', exPips).forEach(li => li.classList.remove('now'));
-  const big = $('#exBig'), zh = $('#exZhResult'), det = $('#exDetail');
-  det.textContent = `答對 ${qscore}／${QS.length} 題。`;
-  if (qscore >= 8) {
-    big.textContent = 'Passed with flying colours!'; zh.textContent = '大獲全勝。頂端桅繩上的旗子，全部為你升起。';
-    hoist.classList.add('is-celebrating'); hoistBtns.forEach(b => b.classList.add('is-up'));
-    sfx.fanfare(); confetti();
-  } else if (qscore >= 5) {
-    big.textContent = 'Passed.'; zh.textContent = '過關了，但旗子還沒全部升起。再考一次，衝八題以上？';
-  } else {
-    big.textContent = 'You came off with flying colours.'; zh.textContent = '照 17 世紀的意思：旗子還在，算是全身而退。回頭翻翻再挑戰？';
-  }
-  exResult.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'center' });
-}
-$('#exAgain').addEventListener('click', () => { hoist.classList.remove('is-celebrating'); exReset(); onScroll(); });
-exReset();
 
 /* ---------------- Confetti of signal flags ---------------- */
 function confetti() {
