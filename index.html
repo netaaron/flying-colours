@@ -292,13 +292,16 @@ button{font:inherit;color:inherit}
 .terms .t-zh{font-weight:700;color:var(--gold-soft);margin:0 0 12px}
 .terms p{font-size:1rem;line-height:1.85;color:var(--on-navy)}
 @media (max-width:860px){.terms{grid-template-columns:1fr}}
-.eras{margin-top:clamp(64px,8vw,112px)}
+.eras{margin-top:clamp(72px,9vw,120px)}
 .eras h3{font-family:var(--ui);font-weight:500;font-size:.95rem;letter-spacing:.16em;color:var(--on-navy-muted);margin-bottom:18px}
 .eras ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;border-top:1px solid var(--line-dark)}
 .eras li{position:relative;padding-top:22px;font-family:var(--ui);font-size:.92rem;color:var(--on-navy)}
+.eras li span{display:block}
+.eras li img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;margin-top:14px;transition:transform .5s ease}
+.eras li:hover img{transform:translateY(-4px)}
 .eras li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold)}
 .eras li b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.3rem,1rem + 1vw,1.8rem);line-height:1.2;margin-bottom:4px}
-@media (max-width:760px){.eras ol{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line-dark);gap:22px;padding-left:22px}.eras li{padding-top:0}.eras li::before{top:8px;left:-27px}}
+@media (max-width:760px){.eras ol{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:66%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--gutter) 14px 0;margin-right:calc(-1 * var(--gutter));border-top:0}.eras li{scroll-snap-align:start;border-top:1px solid var(--line-dark)}.eras li:last-child{margin-right:var(--gutter)}}
 .closing{font-weight:700;font-size:clamp(1.5rem,1.1rem + 1.8vw,2.5rem);line-height:1.55;margin:clamp(64px,8vw,112px) 0 0;max-width:22em;text-wrap:balance}
 
 /* ============ References / footer ============ */
@@ -656,11 +659,11 @@ button{font:inherit;color:inherit}
     <div class="eras">
       <h3>從大航海時代到今天</h3>
       <ol>
-        <li><b lang="en">16th c.</b>大航海時代</li>
-        <li><b lang="en">18th c.</b>團旗閱兵</li>
-        <li><b lang="en">1797</b>英荷海戰</li>
-        <li><b lang="en">1916</b>首次徵兵</li>
-        <li><b>今天</b>護旗隊</li>
+        <li><b lang="en">16th c.</b><span>大航海時代</span><img src="images/era-1-age-of-sail.webp" alt="16 世紀大航海時代的帆船" width="700" height="393" loading="lazy"></li>
+        <li><b lang="en">18th c.</b><span>團旗閱兵</span><img src="images/era-2-trooping.webp" alt="18 世紀英軍團旗閱兵" width="700" height="393" loading="lazy"></li>
+        <li><b lang="en">1797</b><span>英荷海戰</span><img src="images/era-3-camperdown-1797.webp" alt="1797 年英荷海戰，水手把旗子釘回斷桅" width="700" height="393" loading="lazy"></li>
+        <li><b lang="en">1916</b><span>首次徵兵</span><img src="images/era-4-conscription-1916.webp" alt="1916 年英國首次徵兵" width="700" height="392" loading="lazy"></li>
+        <li><b>今天</b><span>護旗隊</span><img src="images/era-5-today.webp" alt="今天紀念日遊行中的護旗隊" width="700" height="393" loading="lazy"></li>
       </ol>
     </div>
 
