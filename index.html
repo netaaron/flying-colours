@@ -134,15 +134,22 @@ button{font:inherit;color:inherit}
 .col-side{grid-column:9 / span 4}
 .col-wide{grid-column:1 / -1}
 @media (max-width:900px){.col-main,.col-side{grid-column:1 / -1}}
-.prose{max-width:34em}
+.prose,.copy{max-width:36em}
+.copy > p:last-child{margin-bottom:0}
+.pair,.trio{margin-top:clamp(40px,5vw,64px)}
+.copy + .pair,.copy + .trio{margin-top:clamp(40px,5vw,56px)}
+.aside-block{margin-top:clamp(48px,6vw,80px)}
+.aside-block .note{margin-top:24px}
+.sub-block{margin-top:clamp(80px,10vw,136px)}
+.phrase .note{margin-top:22px}
 .lead{font-size:var(--fs-lead);line-height:1.8;font-weight:600;margin-bottom:1.2em}
 .kicker{font-family:var(--ui);font-size:.9rem;color:var(--red);margin:0 0 12px;display:flex;align-items:center;gap:10px}
 .section--dark .kicker{color:var(--gold-soft)}
 .kicker svg{width:22px;height:22px}
 .h3{font-size:var(--fs-h3);line-height:1.45;letter-spacing:.02em;margin:0 0 .8em;text-wrap:balance}
-.pull{font-weight:700;font-size:clamp(1.45rem,1.1rem + 1.5vw,2.25rem);line-height:1.6;letter-spacing:.02em;max-width:21em;margin:clamp(56px,8vw,112px) 0;text-wrap:balance}
-.pull::before{content:"";display:block;width:56px;height:46px;margin-bottom:22px;background:no-repeat center/contain}
-.pull[data-mark]::before{background-image:var(--mark)}
+.pull{font-weight:700;font-size:clamp(1.4rem,1.1rem + 1.3vw,2.1rem);line-height:1.6;letter-spacing:.02em;max-width:21em;margin:clamp(40px,6vw,72px) 0 0;padding-left:22px;border-left:3px solid var(--red);text-wrap:balance}
+.section--dark .pull{border-color:var(--gold)}
+.plate + .pull{margin-top:clamp(48px,7vw,88px)}
 .note{font-family:var(--ui);font-size:.95rem;line-height:1.85;color:var(--ink-2);padding-top:14px;border-top:2px solid var(--ink)}
 .note b{display:block;font-size:.85rem;letter-spacing:.12em;color:var(--red);margin-bottom:6px}
 .section--dark .note{color:var(--on-navy-muted);border-color:var(--on-navy)}
@@ -168,21 +175,11 @@ button{font:inherit;color:inherit}
 @media (max-width:860px){.pair,.trio{grid-template-columns:1fr}}
 
 /* figures */
-.bleed{position:relative;margin:clamp(56px,8vw,112px) 0}
-.bleed img{width:100%;height:clamp(340px,56vw,88vh);object-fit:cover}
-.bleed figcaption{position:absolute;left:0;right:0;bottom:0;padding:120px var(--gutter) 28px;background:linear-gradient(0deg,rgba(12,18,32,.82),rgba(12,18,32,0));color:#fff;font-family:var(--ui);font-size:.95rem;line-height:1.7}
-.bleed figcaption span{display:block;max-width:var(--wrap);margin-inline:auto;padding-inline:0}
-.bleed figcaption b{font-family:var(--display);font-weight:400;font-size:1.2rem;margin-right:12px}
-.bleed figcaption .cap-en{display:block;font-family:var(--display);font-weight:400;font-size:1.25em;line-height:1.2;margin-bottom:2px}
-.bleed figcaption strong{display:block;font-family:var(--text);font-weight:700;font-size:clamp(1.15rem,1rem + .7vw,1.55rem);margin-bottom:4px}
-@media (max-width:860px){.bleed figcaption{position:static;background:none;color:var(--ink-2);padding:14px var(--gutter) 32px;font-size:.9rem}.bleed figcaption strong{color:var(--ink);font-size:1.1rem}.bleed figcaption b{color:var(--ink)}}
-.plate{margin:0}
+.plate{margin:clamp(40px,5vw,64px) 0 0}
 .plate img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px}
-.plate--tall img{aspect-ratio:4/5}
-.plate--wide{margin-top:clamp(56px,8vw,104px)}
-.plate--wide img{aspect-ratio:auto}
-.plate--wide figcaption{max-width:46em}
-.plate figcaption{font-family:var(--ui);font-size:.88rem;line-height:1.7;color:var(--muted);margin-top:12px}
+.plate figcaption{font-family:var(--ui);font-size:.9rem;line-height:1.75;color:var(--muted);margin-top:14px;max-width:52em}
+.plate figcaption strong{color:var(--ink);font-weight:700;margin-right:4px}
+.section--dark .plate figcaption strong{color:var(--on-navy)}
 .plate figcaption b{font-family:var(--display);font-weight:400;font-size:1.1rem;color:var(--ink);margin-right:10px}
 .section--dark .plate figcaption{color:var(--on-navy-muted)}
 .section--dark .plate figcaption b{color:var(--on-navy)}
@@ -232,13 +229,13 @@ button{font:inherit;color:inherit}
 .why{margin-top:clamp(40px,5vw,64px)}
 
 /* ============ Family ============ */
+.fam{display:block;text-decoration:none;padding:26px 24px;border-radius:4px;box-shadow:inset 0 0 0 1px var(--line-dark);transition:background-color .25s,box-shadow .25s}
+.fam:hover{background:var(--navy-2);box-shadow:inset 0 0 0 1px rgba(236,232,223,.35)}
 .family h3{font-size:1.3rem;margin:14px 0 4px}
+.family .tags{font-size:1.02rem;margin:0 0 14px}
+.family .where{font-family:var(--ui);font-size:.85rem;letter-spacing:.12em;color:var(--gold-soft);margin:0}
 .family .sub{font-family:var(--ui);font-size:.88rem;color:var(--on-navy-muted);margin:0 0 18px}
 .family svg.icon{width:56px;height:56px}
-.family ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-dark)}
-.family li a{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line-dark);text-decoration:none;font-family:var(--text);font-style:italic;font-size:1.12rem;line-height:1.5;transition:color .2s,padding .25s}
-.family li a::after{content:"";flex:none;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);opacity:.45}
-.family li a:hover{color:var(--gold-soft);padding-left:8px}
 
 /* ============ Verdict game ============ */
 .verdict__card{max-width:44em}
@@ -288,14 +285,8 @@ button{font:inherit;color:inherit}
 @keyframes flash{0%{opacity:.5}100%{opacity:0}}
 @media (max-width:860px){.nail{grid-template-columns:1fr}}
 
-/* ============ Ch7 ============ */
-.duo{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:start;margin-top:clamp(64px,9vw,128px)}
-.duo--flip{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
-.duo--flip .plate{order:2}
-@media (max-width:860px){.duo,.duo--flip{grid-template-columns:1fr}.duo--flip .plate{order:0}}
-
 /* ============ Coda ============ */
-.terms{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,44px)}
+.terms{list-style:none;margin:clamp(40px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,44px)}
 .terms li{border-top:1px solid var(--line-dark);padding-top:22px}
 .terms .t-en{font-family:var(--display);font-size:clamp(1.7rem,1.3rem + 1.4vw,2.4rem);line-height:1.1;margin:0 0 6px}
 .terms .t-zh{font-weight:700;color:var(--gold-soft);margin:0 0 12px}
@@ -303,13 +294,11 @@ button{font:inherit;color:inherit}
 @media (max-width:860px){.terms{grid-template-columns:1fr}}
 .eras{margin-top:clamp(64px,8vw,112px)}
 .eras h3{font-family:var(--ui);font-weight:500;font-size:.95rem;letter-spacing:.16em;color:var(--on-navy-muted);margin-bottom:18px}
-.eras ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
-.eras li figure{margin:0}
-.eras img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:2px;transition:transform .5s}
-.eras li:hover img{transform:scale(1.03)}
-.eras figcaption{font-family:var(--ui);font-size:.85rem;line-height:1.5;margin-top:10px;color:var(--on-navy)}
-.eras figcaption b{display:block;font-family:var(--display);font-weight:400;font-size:1.3rem}
-@media (max-width:860px){.eras ol{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:62%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;margin-right:calc(-1 * var(--gutter));padding-right:var(--gutter)}.eras li{scroll-snap-align:start}}
+.eras ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;border-top:1px solid var(--line-dark)}
+.eras li{position:relative;padding-top:22px;font-family:var(--ui);font-size:.92rem;color:var(--on-navy)}
+.eras li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.eras li b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.3rem,1rem + 1vw,1.8rem);line-height:1.2;margin-bottom:4px}
+@media (max-width:760px){.eras ol{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line-dark);gap:22px;padding-left:22px}.eras li{padding-top:0}.eras li::before{top:8px;left:-27px}}
 .closing{font-weight:700;font-size:clamp(1.5rem,1.1rem + 1.8vw,2.5rem);line-height:1.55;margin:clamp(64px,8vw,112px) 0 0;max-width:22em;text-wrap:balance}
 
 /* ============ References / footer ============ */
@@ -365,40 +354,35 @@ button{font:inherit;color:inherit}
       </div>
     </header>
 
-    <div class="grid">
-      <div class="col-main">
-        <p class="lead">考試考得很好，英文可以說 <i lang="en">pass with flying colours</i>。可是，為什麼是「飄揚的顏色」？</p>
-        <p class="prose">答案藏在一個大家以為很熟的字裡：</p>
-        <p class="equation" lang="en"><span>colours</span><span class="equation__eq">=</span><span class="equation__b">flags</span></p>
-        <p class="equation-cap">字面意思：帶著飄揚的旗子。</p>
-
-        <div class="defs">
-          <div class="def">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 44V4" stroke="currentColor" stroke-width="2"/><path d="M8 6h30l-6 7 6 7H8" fill="#C62127"/><path d="M8 22h22l-5 5 5 5H8" fill="#F3B61B"/></svg>
-            <h3>船上的旗子</h3>
-            <p>牛津英語詞典記載，最晚 16 世紀後期，<i lang="en">colours</i> 就指船上掛的那一整排旗子。</p>
-          </div>
-          <div class="def">
-            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 46L22 2" stroke="currentColor" stroke-width="2"/><path d="M21 6c8-3 14 3 22 0v18c-8 3-14-3-22 0z" fill="#D3A12A"/><path d="M21 24c8-3 14 3 22 0" stroke="#A8261F" stroke-width="2" stroke-dasharray="2 2" fill="none"/></svg>
-            <h3>陸軍的團旗</h3>
-            <p>團旗也叫 <i lang="en">colours</i>，因為旗面就是部隊制服的顏色和徽章。</p>
-          </div>
+    <div class="copy">
+      <p class="lead">考試考得很好，英文會說 <i lang="en">pass with flying colours</i>。可是，為什麼是「飄揚的顏色」？</p>
+      <p>答案藏在一個大家以為很熟的字裡：</p>
+      <p class="equation" lang="en"><span>colours</span><span class="equation__eq">=</span><span class="equation__b">flags</span></p>
+      <p class="equation-cap">字面意思：帶著飄揚的旗子。</p>
+      <div class="defs">
+        <div class="def">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 44V4" stroke="currentColor" stroke-width="2"/><path d="M8 6h30l-6 7 6 7H8" fill="#C62127"/><path d="M8 22h22l-5 5 5 5H8" fill="#F3B61B"/></svg>
+          <h3>船上的旗子</h3>
+          <p>牛津英語詞典記載，最晚 16 世紀後期，這個字就指船上掛的那一整排旗子。</p>
+        </div>
+        <div class="def">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 46L22 2" stroke="currentColor" stroke-width="2"/><path d="M21 6c8-3 14 3 22 0v18c-8 3-14-3-22 0z" fill="#D3A12A"/><path d="M21 24c8-3 14 3 22 0" stroke="#A8261F" stroke-width="2" stroke-dasharray="2 2" fill="none"/></svg>
+          <h3>陸軍的團旗</h3>
+          <p>團旗也用這個字，因為旗面就是部隊制服的顏色和徽章。</p>
         </div>
       </div>
-      <aside class="col-side">
-        <figure class="plate plate--tall">
-          <img src="images/signal-flags.webp" alt="船桅上的一整組信號旗" width="1280" height="632" loading="lazy">
-          <figcaption><b>圖 1</b>船桅上的一整排旗子。</figcaption>
-        </figure>
-      </aside>
+      <p class="pull">所以，考高分可不是說考卷畫得很繽紛。</p>
     </div>
 
-    <p class="pull" data-mark style="--mark:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 50%22%3E%3Crect width=%2260%22 height=%2250%22 fill=%22%23F3B61B%22/%3E%3Cpolygon points=%220,0 60,0 60,50%22 fill=%22%23C62127%22/%3E%3C/svg%3E')">所以 <i lang="en">pass with flying colours</i>，可不是說考卷畫得很繽紛。</p>
+    <figure class="plate">
+      <img src="images/signal-flags.webp" alt="船桅上的一整組信號旗" width="1280" height="632" loading="lazy">
+      <figcaption><b>圖 1</b>船桅上的一整排信號旗：旗子就是船的語言。</figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- ================= CH2 · O ================= -->
-<section class="section" id="ch2" data-stop data-chapter style="padding-bottom:0">
+<section class="section" id="ch2" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
       <div>
@@ -407,13 +391,15 @@ button{font:inherit;color:inherit}
         <p class="ch-en" lang="en">The legend and the record</p>
       </div>
     </header>
-    <p class="lead prose">最常聽到的由來是這樣：打了勝仗的船，掛滿旗子回港，岸上一片歡呼。很有電影感對吧？只有一個小問題……</p>
-  </div>
+    <div class="copy">
+      <p class="lead">最常聽到的由來是這樣：打了勝仗的船，掛滿旗子回港，岸上一片歡呼。很有電影感對吧？只有一個小問題……</p>
+    </div>
 
-  <figure class="bleed" style="margin-bottom:0">
-    <img src="images/legend-victory-ship.webp" alt="掛滿旗幟的蓋倫船駛進港口，岸上群眾歡呼" width="1672" height="941" loading="lazy">
-    <figcaption><span><strong>流行說法：打了勝仗的船，掛滿旗子開回港口</strong><b>圖 2</b>好聽，但文獻不是這樣說的。</span></figcaption>
-  </figure>
+    <figure class="plate">
+      <img src="images/legend-victory-ship.webp" alt="掛滿旗幟的蓋倫船駛進港口，岸上群眾歡呼" width="1672" height="941" loading="lazy">
+      <figcaption><b>圖 2</b>流行說法裡的凱旋場景。好聽，但文獻不是這樣說的。</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- ================= CH3 · L ================= -->
@@ -432,27 +418,18 @@ button{font:inherit;color:inherit}
         <p class="era__when">17–18 世紀　戰場</p>
         <p class="era__phrase" lang="en"><span class="v">come off</span> with flying colours</p>
         <p class="era__mean">保住體面、全身而退</p>
-        <p class="example__en" lang="en">The army surrendered the town but marched out with flying colours.</p>
-        <p class="example__zh">（這支軍隊雖然交出城池，卻帶著飄揚的軍旗體面撤出。）</p>
       </div>
       <svg class="era__arrow" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h34M30 13l11 11-11 11" fill="none" stroke="currentColor" stroke-width="2"/></svg>
       <div class="era era--now">
         <p class="era__when">19 世紀以後　考場</p>
         <p class="era__phrase" lang="en"><span class="v">pass</span> with flying colours</p>
         <p class="era__mean">表現優異、大獲成功</p>
-        <p class="example__en" lang="en">She passed the exam with flying colours.</p>
-        <p class="example__zh">（她以優異的成績通過了考試。）</p>
       </div>
     </div>
 
-    <div class="grid why">
-      <div class="col-main">
-        <p class="kicker">為什麼會變？</p>
-        <p class="prose">語源學者推測：武器越來越強，旗子退出了戰場，只剩勝利遊行時才出場，意思也就跟著變成「大獲全勝」。</p>
-      </div>
-      <aside class="col-side">
-        <p class="note"><b>動詞也換了</b>從 <i lang="en">come off</i>（脫身）換成 <i lang="en">pass</i>（過關），一路從戰場走進了考場。</p>
-      </aside>
+    <div class="copy why">
+      <p class="kicker">為什麼會變？</p>
+      <p>語源學者推測：武器越來越強，旗子退出了戰場，只剩勝利遊行時才出場，意思也就跟著變成「大獲全勝」。動詞也從「脫身」換成「過關」，一路從戰場走進了考場。</p>
     </div>
   </div>
 </section>
@@ -460,67 +437,61 @@ button{font:inherit;color:inherit}
 <!-- ================= FAMILY ================= -->
 <section class="section section--dark" id="family" data-stop>
   <div class="wrap">
-    <header class="ch-head" style="grid-template-columns:1fr">
+    <header class="ch-head">
       <div>
         <p class="ch-no">間奏　片語家族地圖</p>
         <h2 class="ch-title"><span class="nw">旗子升起、</span><span class="nw">降下、</span><span class="nw">扛著走：</span><br>一整個片語家族</h2>
         <p class="ch-en" lang="en">The family</p>
       </div>
     </header>
-    <p class="lead prose"><i lang="en">with flying colours</i> 其實還有一整個家族。我們把它們分成三組：亮出旗子、降下旗子，還有軍隊裡跟旗子有關的儀式。點任一個片語，直接翻到那一頁。</p>
-    <div class="trio family" style="margin-top:48px">
-      <div>
+    <div class="copy">
+      <p class="lead">這個片語其實還有一整個家族，大約十個說法。我們把它們分成三組，接下來依序介紹。</p>
+    </div>
+    <div class="trio family">
+      <a class="fam" href="#ch4">
         <svg class="icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M14 54V4" stroke="#ECE8DF" stroke-width="2"/><path d="M14 5c9-3 16 3 27 0v17c-11 3-18-3-27 0z" fill="#C62127"/><path d="M4 54h40" stroke="#ECE8DF" stroke-width="1.4" opacity=".5"/></svg>
         <h3>亮出旗幟</h3>
         <p class="sub">身分與立場</p>
-        <ul>
-          <li><a href="#ch4" lang="en">sail under false colours</a></li>
-          <li><a href="#ch4" lang="en">show one’s true colours</a></li>
-          <li><a href="#ch5" lang="en">nail one’s colours to the mast</a></li>
-        </ul>
-      </div>
-      <div>
+        <p class="tags">冒充、現形、公開表態</p>
+        <p class="where">第四、五章</p>
+      </a>
+      <a class="fam" href="#ch6">
         <svg class="icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M14 54V4" stroke="#ECE8DF" stroke-width="2"/><path d="M14 34c6 0 10 4 18 3v15c-8 1-12-3-18-3z" fill="#A4ACBD"/><path d="M4 54h40" stroke="#ECE8DF" stroke-width="1.4" opacity=".5"/></svg>
         <h3>降下旗幟</h3>
         <p class="sub">認輸</p>
-        <ul>
-          <li><a href="#ch6" lang="en">strike one’s colours</a></li>
-          <li><a href="#ch6" lang="en">lower one’s colours</a></li>
-          <li><a href="#ch6" lang="en">go down with colours flying</a></li>
-        </ul>
-      </div>
-      <div>
+        <p class="tags">投降、讓步、雖敗猶榮</p>
+        <p class="where">第六章</p>
+      </a>
+      <a class="fam" href="#ch7">
         <svg class="icon" viewBox="0 0 56 56" aria-hidden="true"><path d="M10 54L26 2" stroke="#ECE8DF" stroke-width="2"/><path d="M25 6c8-3 14 3 24 0v17c-10 3-16-3-24 0z" fill="#D3A12A"/><path d="M25 23c8-3 14 3 24 0" stroke="#ECE8DF" stroke-width="2" stroke-dasharray="1.5 2.5" fill="none"/></svg>
         <h3>軍隊與典禮</h3>
         <p class="sub">集結、徵召與儀式</p>
-        <ul>
-          <li><a href="#trooping" lang="en">Trooping the Colour</a></li>
-          <li><a href="#trooping" lang="en">rally to the colours</a></li>
-          <li><a href="#callup" lang="en">call / join the colours</a></li>
-          <li><a href="#guard" lang="en">colour guard / colour sergeant</a></li>
-        </ul>
-      </div>
+        <p class="tags">閱兵、集合、徵召、護旗</p>
+        <p class="where">第七章</p>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- ================= CH4 · O ================= -->
-<section class="section" id="ch4" data-stop data-chapter style="padding-bottom:0">
+<section class="section" id="ch4" data-stop data-chapter>
   <div class="wrap">
     <header class="ch-head">
       <div>
         <p class="ch-no">第四章　亮出旗幟｜身分與立場</p>
         <h2 class="ch-title"><span class="nw">掛假旗是欺騙，</span><br><span class="nw">亮出真旗</span><span class="nw">是現出原形</span></h2>
-        <p class="ch-en" lang="en">False colours, true colours</p>
+        <p class="ch-en" lang="en">Disguise and reveal</p>
       </div>
     </header>
-    <p class="lead prose">這兩個片語是同一招的上下集：先掛假旗騙人靠近，再亮出真旗。</p>
+    <div class="copy">
+      <p class="lead">這兩個片語是同一招的上下集：先掛假旗騙人靠近，再亮出真旗。</p>
+    </div>
 
-    <div class="pair" style="margin-top:48px">
+    <div class="pair">
       <article class="phrase">
         <h3 class="phrase__en" lang="en">sail under false colours</h3>
         <p class="phrase__zh">冒充、欺騙</p>
-        <p>海盜的經典套路：先掛友好國家的旗子裝熟，等靠近了再翻臉，亮出真正的旗子。</p>
+        <p>海盜的經典套路：先掛友好國家的旗子裝熟，等靠近了再翻臉。</p>
       </article>
       <article class="phrase">
         <h3 class="phrase__en" lang="en">show one’s true colours</h3>
@@ -529,21 +500,17 @@ button{font:inherit;color:inherit}
       </article>
     </div>
 
-    <div class="grid" style="margin-top:clamp(48px,6vw,80px)">
-      <div class="col-main">
-        <p class="kicker">問題是</p>
-        <p class="prose">早在 1551 年，英國牧師 Thomas Becon 就拿它來比喻「露出真面目」；連「掛假旗」也是先當比喻，後來才用在海戰上。海戰版的故事，很可能是後人補上的。</p>
-      </div>
-      <aside class="col-side">
-        <p class="note"><b>又一個</b>跟 <i lang="en">with flying colours</i> 一樣：好聽，但不一定是真的典故。</p>
-      </aside>
+    <div class="copy aside-block">
+      <p class="kicker">問題是</p>
+      <p>早在 1551 年，英國牧師 Thomas Becon 就拿它來比喻「露出真面目」；連「掛假旗」也是先當比喻，後來才用在海戰上。海戰版的故事，很可能是後人補上的。</p>
+      <p class="note"><b>又一個</b>跟第二章的港口傳說一樣：好聽，但不一定是真的典故。</p>
     </div>
-  </div>
 
-  <figure class="bleed" style="margin-bottom:0">
-    <img src="images/false-to-true-colours.webp" alt="桅杆正進行旗幟交接：上方是勃根地十字旗，下方是聖喬治十字旗" width="1672" height="941" loading="lazy">
-    <figcaption><span><strong><span lang="en" class="cap-en">show one’s true colours</span>降下假的西班牙旗，換上真的英格蘭旗</strong><b>圖 3</b>桅杆上的兩面旗：桅杆正進行旗幟交接。上方為勃根地十字旗（16–18 世紀西班牙帝國軍旗），下方是聖喬治十字旗（英格蘭國旗）。</span></figcaption>
-  </figure>
+    <figure class="plate">
+      <img src="images/false-to-true-colours.webp" alt="桅杆正進行旗幟交接：上方是勃根地十字旗，下方是聖喬治十字旗" width="1672" height="941" loading="lazy">
+      <figcaption><b>圖 3</b><strong>降下假的西班牙旗，換上真的英格蘭旗。</strong>桅杆上的兩面旗：桅杆正進行旗幟交接。上方為勃根地十字旗（16–18 世紀西班牙帝國軍旗），下方是聖喬治十字旗（英格蘭國旗）。</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- ================= CH5 · U ================= -->
@@ -557,27 +524,17 @@ button{font:inherit;color:inherit}
       </div>
     </header>
 
-    <div class="grid">
-      <div class="col-main">
-        <figure class="plate plate--tall">
-          <img src="images/nail-colours-1797.webp" alt="水手爬上斷裂的桅杆，把藍色將旗釘回頂端" width="1320" height="729" loading="lazy">
-          <figcaption><b>圖 4</b>情境重現：1797 年英荷海戰。</figcaption>
-        </figure>
-      </div>
-      <aside class="col-side">
-        <p class="kicker">典故</p>
-        <p>1797 年英國和荷蘭打海戰，英軍旗艦的桅杆被砲彈打斷，旗子掉了下來，看起來就像在喊「我投降」。</p>
-        <p>年輕水手 Jack Crawford 冒著砲火爬上斷掉的桅杆，把旗子釘死在上面：這下想降也降不了。</p>
-      </aside>
+    <div class="copy">
+      <p class="kicker">典故</p>
+      <p>1797 年英國和荷蘭打海戰，英軍旗艦的桅杆被砲彈打斷，旗子掉了下來，看起來就像在喊「我投降」。</p>
+      <p>年輕水手 Jack Crawford 冒著砲火爬上斷掉的桅杆，把旗子釘死在上面：這下想降也降不了。</p>
+      <p class="pull"><span class="nw">旗子釘在桅杆上，</span><span class="nw">就降不下來了，</span><span class="nw">等於宣告絕不投降。</span><span class="nw">公開表態，</span><span class="nw">不留退路。</span></p>
     </div>
 
-    <p class="pull" data-mark style="--mark:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 50%22%3E%3Crect width=%2260%22 height=%2250%22 fill=%22%23FBFBF8%22/%3E%3Crect width=%2230%22 height=%2225%22 fill=%22%23C62127%22/%3E%3Crect x=%2230%22 y=%2225%22 width=%2230%22 height=%2225%22 fill=%22%23C62127%22/%3E%3C/svg%3E')"><span class="nw">旗子釘在桅杆上，</span><span class="nw">就降不下來了，</span><span class="nw">等於宣告絕不投降。</span><span class="nw">公開表態，</span><span class="nw">不留退路。</span></p>
-
-    <div class="example" style="max-width:40em">
-      <p class="example__label">例句</p>
-      <p class="example__en" lang="en">The mayor nailed her colours to the mast and promised to save the old library.</p>
-      <p class="example__zh">（市長公開表明立場，承諾一定保住舊圖書館。）</p>
-    </div>
+    <figure class="plate">
+      <img src="images/nail-colours-1797.webp" alt="水手爬上斷裂的桅杆，把藍色將旗釘回頂端" width="1320" height="729" loading="lazy">
+      <figcaption><b>圖 4</b>情境重現：1797 年英荷海戰，英軍旗艦的斷桅。</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -588,12 +545,14 @@ button{font:inherit;color:inherit}
       <div>
         <p class="ch-no">第六章　降下旗幟｜認輸</p>
         <h2 class="ch-title"><span class="nw">旗子一降下來，</span><span class="nw">就是認輸了</span></h2>
-        <p class="ch-en" lang="en">Striking the colours</p>
+        <p class="ch-en" lang="en">When the flag comes down</p>
       </div>
     </header>
-    <p class="lead prose">這三個都跟降旗有關：<i lang="en">strike</i> 是直接投降，<i lang="en">lower</i> 是退一步，<i lang="en">go down with colours flying</i> 則是輸了也輸得有骨氣。</p>
+    <div class="copy">
+      <p class="lead">同一面旗：降到底、降一半，或是船沉了旗還在飄，意思完全不同。</p>
+    </div>
 
-    <div class="trio" style="margin-top:48px">
+    <div class="trio">
       <article class="phrase">
         <svg class="phrase__icon" viewBox="0 0 72 72" aria-hidden="true"><path d="M8 64h56" stroke="currentColor" stroke-width="1.5" opacity=".5"/><path d="M22 64V6" stroke="currentColor" stroke-width="2.4"/><path d="M23 46c5 1 9 5 11 16H23z" fill="#C62127"/></svg>
         <h3 class="phrase__en" lang="en">strike one’s colours</h3>
@@ -601,7 +560,7 @@ button{font:inherit;color:inherit}
         <p>把旗子降下來，就是對敵人說：「好啦，你贏了。」</p>
       </article>
       <article class="phrase">
-        <svg class="phrase__icon" viewBox="0 0 72 72" aria-hidden="true"><path d="M8 64h56" stroke="currentColor" stroke-width="1.5" opacity=".5"/><path d="M22 64V6" stroke="currentColor" stroke-width="2.4"/><path d="M22 6h8M22 64" stroke="currentColor" stroke-width="1" opacity=".4" stroke-dasharray="2 3"/><path d="M23 28c8-3 14 3 24 0v15c-10 3-16-3-24 0z" fill="#C62127"/></svg>
+        <svg class="phrase__icon" viewBox="0 0 72 72" aria-hidden="true"><path d="M8 64h56" stroke="currentColor" stroke-width="1.5" opacity=".5"/><path d="M22 64V6" stroke="currentColor" stroke-width="2.4"/><path d="M23 28c8-3 14 3 24 0v15c-10 3-16-3-24 0z" fill="#C62127"/></svg>
         <h3 class="phrase__en" lang="en">lower one’s colours</h3>
         <p class="phrase__zh">讓步、收回主張</p>
         <p>旗子放低一點，就是態度放軟、退一步。</p>
@@ -633,45 +592,44 @@ button{font:inherit;color:inherit}
         <p class="phrase__zh">軍旗敬禮分列式（英王壽辰閱兵）</p>
         <p>以前打仗沒有手機定位，士兵靠團旗找自己人。所以軍官會扛著團旗在隊伍前走一圈，讓大家記熟「這是我們的旗」，這個「走一圈」就叫 <i lang="en">trooping</i>。</p>
         <p>後來變成慶祝英國國王生日的閱兵；1760 年英王喬治三世即位後，每年固定舉辦。</p>
-        <p class="note" style="margin-top:22px"><b>順帶一提</b><i lang="en">Trooping the Colour</i> 的 <i lang="en">Colour</i> 是單數。</p>
+        <p class="note"><b>順帶一提</b>這裡的 <i lang="en">Colour</i> 是單數。</p>
       </article>
       <article class="phrase">
         <h3 class="phrase__en" lang="en">rally to the colours</h3>
         <p class="phrase__zh">響應號召、挺身支持</p>
-        <p>戰場一片混亂時，士兵看到自家的旗子，就往那裡集合。現在有人登高一呼、大家跑來力挺，就是 <i lang="en">rally to the colours</i>。</p>
+        <p>戰場一片混亂時，士兵看到自家的旗子，就往那裡集合。現在有人登高一呼、大家跑來力挺，就是這個片語。</p>
       </article>
     </div>
 
-    <figure class="plate plate--wide">
-      <img src="images/regimental-camp-18c.webp" alt="18 世紀英軍營地的 Trooping the Colour：掌旗官高舉黃色團旗行經隊伍" width="1320" height="736" loading="lazy">
-      <figcaption><b>圖 5</b>情境重現：18 世紀英軍營地的 <i lang="en">Trooping the Colour</i>。掌旗官扛著團旗在隊伍前走一圈，讓士兵記熟自己的旗。注意團旗和制服是同一個黃色：這就是團旗叫 <i lang="en">colours</i> 的原因。</figcaption>
+    <figure class="plate">
+      <img src="images/regimental-camp-18c.webp" alt="18 世紀英軍營地，掌旗官高舉黃色團旗行經隊伍" width="1320" height="736" loading="lazy">
+      <figcaption><b>圖 5</b>情境重現：18 世紀英軍營地的軍旗敬禮分列式。注意團旗和制服是同一個黃色：這就是團旗叫 <i lang="en">colours</i> 的原因。</figcaption>
     </figure>
 
-    <div class="duo" id="callup">
-      <figure class="plate plate--tall">
-        <img src="images/call-to-colours-1916.webp" alt="1916 年英國小鎮，穿便服的男子排隊走進掛著米字旗的營舍" width="1320" height="743" loading="lazy">
-        <figcaption><b>圖 6</b>情境重現：1916 年，英國第一次實施徵兵。</figcaption>
-      </figure>
-      <article class="phrase">
+    <div class="sub-block" id="callup">
+      <article class="phrase copy">
         <h3 class="phrase__en" lang="en">call to the colours<br>join the colours</h3>
         <p class="phrase__zh">徵召入伍／從軍</p>
         <p>國家需要你，就把你叫到軍旗底下。<i lang="en">join</i> 是自己去報名，<i lang="en">called</i> 是收到兵單：差一個字，心情差很多。</p>
       </article>
+      <figure class="plate">
+        <img src="images/call-to-colours-1916.webp" alt="1916 年英國小鎮，穿便服的男子排隊走進掛著米字旗的營舍" width="1320" height="743" loading="lazy">
+        <figcaption><b>圖 6</b>情境重現：1916 年，英國第一次實施徵兵。</figcaption>
+      </figure>
+      <p class="pull">到了 1916 年，英軍早就不把團旗帶上戰場了，但這個說法還在用。片語比它描述的習俗活得還久。</p>
     </div>
 
-    <p class="pull" data-mark style="--mark:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 50%22%3E%3Crect width=%2260%22 height=%2250%22 fill=%22%23FBFBF8%22/%3E%3Crect x=%2220%22 y=%2216.67%22 width=%2220%22 height=%2216.67%22 fill=%22%231C4E9A%22/%3E%3C/svg%3E')">到了 1916 年，英軍早就不把團旗帶上戰場了，但 <i lang="en">called to the colours</i> 這個說法還在用。片語比它描述的習俗活得還久。</p>
-
-    <div class="duo duo--flip" id="guard">
-      <figure class="plate plate--tall">
-        <img src="images/colour-guard-today.webp" alt="陣亡將士紀念日，護旗隊高舉軍旗走在小鎮遊行最前方" width="1320" height="731" loading="lazy">
-        <figcaption><b>圖 7</b>陣亡將士紀念日的護旗隊。兩側拿槍的，就是護衛。</figcaption>
-      </figure>
-      <article class="phrase">
+    <div class="sub-block" id="guard">
+      <article class="phrase copy">
         <h3 class="phrase__en" lang="en">colour guard<br>colour sergeant</h3>
         <p class="phrase__zh">護旗隊／掌旗士官</p>
         <p>專門扛旗、護旗的小隊。旗子代表整個部隊的面子，弄丟了可是天大的丟臉，所以要派人保護。</p>
-        <p class="note" style="margin-top:22px"><b>冷知識</b>美國人習慣說 <i lang="en">colour guard</i>，英國軍方多半叫它 <i lang="en">colour party</i>：聽起來像派對，其實場合很嚴肅。</p>
+        <p class="note"><b>冷知識</b>這是美國人的習慣說法；英國軍方多半叫它 <i lang="en">colour party</i>：聽起來像派對，其實場合很嚴肅。</p>
       </article>
+      <figure class="plate">
+        <img src="images/colour-guard-today.webp" alt="陣亡將士紀念日，護旗隊高舉軍旗走在小鎮遊行最前方" width="1320" height="731" loading="lazy">
+        <figcaption><b>圖 7</b>陣亡將士紀念日的護旗隊。兩側拿槍的，就是護衛。</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -679,15 +637,17 @@ button{font:inherit;color:inherit}
 <!-- ================= CODA ================= -->
 <section class="section section--dark" id="coda" data-stop>
   <div class="wrap">
-    <header class="ch-head" style="grid-template-columns:1fr">
+    <header class="ch-head">
       <div>
         <p class="ch-no">終章　結語</p>
         <h2 class="ch-title">片語是一塊語言化石</h2>
         <p class="ch-en" lang="en">A linguistic fossil</p>
       </div>
     </header>
-    <p class="lead prose">旗子早就退出戰場，片語卻留了下來。東西和習俗變了、名稱還在，意思只好跟著改。</p>
-    <ul class="terms" style="margin-top:48px">
+    <div class="copy">
+      <p class="lead">旗子早就退出戰場，片語卻留了下來。東西和習俗變了、名稱還在，意思只好跟著改。</p>
+    </div>
+    <ul class="terms">
       <li><p class="t-en" lang="en">linguistic fossil</p><p class="t-zh">語言化石</p><p>它保存了已經消失的習俗：旗子早就退出戰場，片語還留著。</p></li>
       <li><p class="t-en" lang="en">semantic change</p><p class="t-zh">語意轉變</p><p>意思從「全身而退」變成「大獲全勝」：這是歷史原因造成的語意轉變。</p></li>
       <li><p class="t-en" lang="en">folk etymology</p><p class="t-zh">民間詞源</p><p>大家相信、卻不一定是真的由來。打了勝仗回港的船，就是一例。</p></li>
@@ -696,11 +656,11 @@ button{font:inherit;color:inherit}
     <div class="eras">
       <h3>從大航海時代到今天</h3>
       <ol>
-        <li><figure><img src="images/era-1-age-of-sail.webp" alt="16 世紀大航海時代的帆船" width="700" height="393" loading="lazy"><figcaption><b lang="en">16th c.</b>16 世紀｜大航海時代</figcaption></figure></li>
-        <li><figure><img src="images/era-2-trooping.webp" alt="18 世紀團旗閱兵" width="700" height="393" loading="lazy"><figcaption><b lang="en">18th c.</b>18 世紀｜團旗閱兵</figcaption></figure></li>
-        <li><figure><img src="images/era-3-camperdown-1797.webp" alt="1797 年英荷海戰" width="700" height="393" loading="lazy"><figcaption><b lang="en">1797</b>英荷海戰</figcaption></figure></li>
-        <li><figure><img src="images/era-4-conscription-1916.webp" alt="1916 年英國首次徵兵" width="700" height="393" loading="lazy"><figcaption><b lang="en">1916</b>首次徵兵</figcaption></figure></li>
-        <li><figure><img src="images/era-5-today.webp" alt="今天的護旗隊" width="700" height="393" loading="lazy"><figcaption><b>今天</b>護旗隊</figcaption></figure></li>
+        <li><b lang="en">16th c.</b>大航海時代</li>
+        <li><b lang="en">18th c.</b>團旗閱兵</li>
+        <li><b lang="en">1797</b>英荷海戰</li>
+        <li><b lang="en">1916</b>首次徵兵</li>
+        <li><b>今天</b>護旗隊</li>
       </ol>
     </div>
 

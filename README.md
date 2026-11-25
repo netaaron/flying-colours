@@ -9,7 +9,7 @@ Language and culture final report
 
 ```
 index.html      整個網頁（版面、文字、小遊戲都在這一個檔案裡）
-images/         13 張情境圖（WebP）＋ 分享縮圖 og-cover.jpg
+images/         8 張情境圖（WebP）＋ 分享縮圖 og-cover.jpg
 README.md       本說明
 ```
 
